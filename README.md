@@ -38,6 +38,7 @@ Configuration steps:
   [https://github.com/JustAdumbPrsn/Zen-Nebula/releases/tag/v3.1](https://github.com/JustAdumbPrsn/Zen-Nebula/releases/tag/v3.1)
   
   OR my favorite option
+
   <img width="832" height="632" alt="image" src="https://github.com/user-attachments/assets/023c35e1-9f7a-42f6-9526-497ea16896c1" />
 
 
