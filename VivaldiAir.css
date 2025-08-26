@@ -271,3 +271,195 @@ div#main.right #panels-container {
     border-right: 1px solid color-mix(in srgb, var(--colorFg), transparent 60%) !important;
 }
 
+/* ========================================================= */
+/* SPEED DIAL SEARCH BAR (blurred idle + consistent roundness) */
+/* ========================================================= */
+
+/* Idle blurred */
+.startpage .SearchField:not(:hover):not(:focus-within),
+.StartPage .SearchField:not(:hover):not(:focus-within),
+.SpeedDial .SearchField:not(:hover):not(:focus-within),
+.SpeedDialView .SearchField:not(:hover):not(:focus-within) {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    border-radius: var(--radius) !important;
+    box-shadow: none !important;
+    transition: background-color 0.18s ease, backdrop-filter 0.18s ease;
+}
+
+/* Stronger blur when hovered/focused */
+.startpage .SearchField:hover,
+.startpage .SearchField:focus-within,
+.StartPage .SearchField:hover,
+.StartPage .SearchField:focus-within,
+.SpeedDial .SearchField:hover,
+.SpeedDial .SearchField:focus-within,
+.SpeedDialView .SearchField:hover,
+.SpeedDialView .SearchField:focus-within {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius) !important; /* keep corners consistent */
+}
+
+/* Inner input transparency */
+.startpage .SearchField input,
+.StartPage .SearchField input,
+.SpeedDial .SearchField input,
+.SpeedDialView .SearchField input {
+    background: transparent !important;
+    color: inherit !important;
+    border-radius: var(--radius) !important;
+}
+.mainbar,
+.bookmark-bar {
+    z-index: 10; /* keep reasonable */
+}
+
+/* == Startpage Navigation Mod integrated with Vivaldi theme - Adjusted Padding == */
+
+/* Config variables for Startpage Navigation Mod */
+:root {
+    --startpageNavBtnPrimary: var(--colorFg);
+    --startpageNavBtnSecondary: var(--colorHighlightBg);
+    --startpageNavBtnInactive: var(--overlayColor);
+    --startpageNavBtnRounding: 14px;
+    --startpageNavBtnHeight: 23px;
+    --startpageNavBtnMargin: 10px;
+    --startpageNavBackground: var(--overlayColor);
+    --startpageNavPaddingOnTop: 10px;      /* decreased padding */
+    --startpageNavPaddingOnBottom: 10px;   /* decreased padding */
+    --startpageNavTextShadow: none;
+    --startpageNavIconShadow: drop-shadow(0 0 2px var(--startpageNavBtnSecondary));
+}
+
+/* Startpage Nav Bar background and spacing */
+.startpage .startpage-navigation {
+    background-color: var(--startpageNavBackground);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding-top: var(--startpageNavPaddingOnTop);
+    padding-bottom: calc(var(--startpageNavPaddingOnBottom) - 2px);
+    min-height: unset;
+    box-shadow: none;
+}
+
+/* Remove background from folder nav buttons */
+.startpage .startpage-folder-navigation button {
+    background-color: var(--startpageNavBtnInactive);
+}
+
+/* Format buttons for Startpage Nav Bar */
+.startpage .startpage-navigation .button-startpage,
+.startpage .startpage-folder-navigation .button-startpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--startpageNavBtnHeight);
+    min-height: unset;
+    border-radius: var(--startpageNavBtnRounding) !important;
+    border: 1.2px solid var(--startpageNavBtnPrimary);
+    background-color: var(--startpageNavBtnInactive);
+    color: var(--startpageNavBtnPrimary);
+    margin: 0 var(--startpageNavBtnMargin) !important;
+    text-shadow: var(--startpageNavTextShadow);
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    transition: 0.1s;
+    font-size: 11px;
+    font-weight: 500;
+    -webkit-mask-image: unset;
+}
+
+/* Hover or active state for buttons */
+.startpage .startpage-navigation .button-startpage.active,
+.startpage .startpage-navigation .button-startpage:hover,
+.startpage .startpage-folder-navigation .button-startpage:hover {
+    color: var(--startpageNavBtnSecondary);
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    text-shadow: none;
+}
+
+/* Format icons for Startpage Nav Bar buttons */
+.startpage .startpage-navigation .button-startpage svg,
+.startpage .startpage-folder-navigation .button-startpage svg {
+    color: var(--startpageNavBtnPrimary);
+    filter: var(--startpageNavIconShadow);
+    height: 2.1em;
+    width: auto;
+}
+
+.startpage .startpage-navigation .button-startpage.add-set svg {
+    margin: 0;
+    height: 16px; /* fix alignment */
+}
+
+/* Hover/active icons */
+.startpage .startpage-navigation .button-startpage.active svg,
+.startpage .startpage-navigation .button-startpage:hover svg,
+.startpage .startpage-folder-navigation .button-startpage:hover svg {
+    color: var(--startpageNavBtnSecondary);
+    filter: unset;
+}
+
+/* Speed dial folder back button fixes */
+button.button-startpage.up-level svg {
+    position: unset;
+    margin: 0 4px;
+}
+button.button-startpage.up-level span {
+    display: flex;
+}
+.button-startpage.up-level {
+    padding: 0 14px 0 6px;
+}
+
+/* Center the speed dial folder back button */
+.startpage .startpage-folder-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove border between navigation groups */
+.startpage .startpage-navigation .startpage-navigation-group:last-of-type {
+    border: unset;
+}
+
+/* Remove color gradient after buttons */
+button.button-startpage:after {
+    content: unset;
+}
+
+/* Make new speed dial folder add button smaller */
+.startpage .startpage-navigation .button-startpage.add-set {
+    padding-left: 1px;
+    padding-right: 1px;
+    min-width: 27px;
+}
+
+/* Fill the new speed dial add button icon correctly */
+button.button-startpage.add-set svg path {
+    fill: var(--startpageNavBtnPrimary);
+}
+button.button-startpage.add-set:hover svg path {
+    fill: var(--startpageNavBtnSecondary);
+}
+
+/* Remove gap from top of speed dial items */
+.speeddial {
+    margin-top: 0;
+    padding-top: 2px;
+}
+
+/* Fix search-enabled spacing */
+.sdwrapper .iconmenu-container.searchfield {
+    margin: 0px auto 25px;
+}
+
+/* Adjust notes navigation icon size */
+.startpage .startpage-navigation .button-startpage[data-id="notes"] svg {
+    transform: scale(1.45);
+}
