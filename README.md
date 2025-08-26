@@ -25,7 +25,8 @@ Configuration steps:
 
   Colors:
   
-  <img width="548" height="355" alt="image" src="https://github.com/user-attachments/assets/12d9d7a0-90f9-4326-9e88-b6af02823b5f" />
+  <img width="814" height="752" alt="image" src="https://github.com/user-attachments/assets/59b23620-def2-4889-923d-48109d716c04" />
+
   
   Background (my recommendations):
   
@@ -35,7 +36,7 @@ Configuration steps:
   
   Settings:
   
-  <img width="549" height="255" alt="image" src="https://github.com/user-attachments/assets/2bfc2d57-bd3c-43ea-8ab0-006db4a05518" />
+<img width="843" height="622" alt="image" src="https://github.com/user-attachments/assets/5337b7e5-4226-4a1e-af65-6e41698a12fc" />
 
   Icons (optional):
 
