@@ -89,3 +89,10 @@ made the navigation bar adaptive
 <img width="1918" height="1012" alt="image" src="https://github.com/user-attachments/assets/7f01130d-e3fa-4f7c-a2ac-dfa57605911c" />
 <img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/9be9621f-3633-402e-a511-7fd2854360d3" />
 
+----
+Update 5
+----
+Merged pull request - Recenter New tab/bin/cloud icons on the tab bar , thnx Ryfters
+Added version number
+
+=
