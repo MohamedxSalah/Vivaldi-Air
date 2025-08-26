@@ -66,19 +66,25 @@ Start page Navigation bar is now themed thanks to
 "https://forum.vivaldi.net/topic/47116/transparent-startpage-navigation-bar-configurable"
 
 <img width="1557" height="975" alt="image" src="https://github.com/user-attachments/assets/f508c30d-b126-4996-a196-5710b19e5e4d" />
+
 -----
 Update 2 
 -----
+
 fixed INNER ROUND BORDERS margin 
+
 ----
 update 3 
 ----
+
 fix right sidebar margin issue 
 fix inner corners margin issue when hiding sidebar
+
 ----
 update 4
 ----
+
 made the navigation bar adaptive
-<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/4f824dd9-24da-4d1c-a936-ce31dbceed97" />
-<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/cb5d9c7e-d109-4141-9ac5-3e4bab931e54" />
+<img width="1918" height="1012" alt="image" src="https://github.com/user-attachments/assets/7f01130d-e3fa-4f7c-a2ac-dfa57605911c" />
+<img width="1918" height="1017" alt="image" src="https://github.com/user-attachments/assets/9be9621f-3633-402e-a511-7fd2854360d3" />
 
