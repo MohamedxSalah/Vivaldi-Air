@@ -133,7 +133,6 @@ div#main.right #panels-container {
 .color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar,
 .color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar {
     color: var(--colorFg);
-    margin-top: 5px;
 }
 
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar > button:active,
@@ -482,3 +481,4 @@ button.button-startpage:after { content: unset; }
 /* ========================================================= */
 /* END STARTPAGE NAVIGATION */
 /* ========================================================= */
+
