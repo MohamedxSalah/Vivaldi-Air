@@ -92,7 +92,12 @@ made the navigation bar adaptive
 ----
 Update 5
 ----
-Merged pull request - Recenter New tab/bin/cloud icons on the tab bar , thnx Ryfters
+Merged pull request - Recenter New tab/bin/cloud icons on the tab bar, thnx Ryfters 
 
 Added version number
 
+---
+update 6
+---
+
+Align Window controls and Vivaldi button with tab bar and increase top padding, thnx Ryfters
