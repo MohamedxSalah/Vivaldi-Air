@@ -79,3 +79,6 @@ fix inner corners margin issue when hiding sidebar
 update 4
 ----
 made the navigation bar adaptive
+<img width="1918" height="1022" alt="image" src="https://github.com/user-attachments/assets/4f824dd9-24da-4d1c-a936-ce31dbceed97" />
+<img width="1918" height="1011" alt="image" src="https://github.com/user-attachments/assets/cb5d9c7e-d109-4141-9ac5-3e4bab931e54" />
+
