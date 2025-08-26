@@ -1,0 +1,272 @@
+/* TODO
+adaptive overlays now fixed for light + dark
+*/
+
+:root {
+    --lessTransparent: rgba(0,0,0,0.4); /* fallback */
+    --customRadius: 8px; /* NOT USING NOW */
+
+    /* New adaptive overlay system */
+    --overlayDark: rgba(0, 0, 0, 0.4);
+    --overlayLight: rgba(255, 255, 255, 0.4);
+}
+
+/* set theme-aware overlay */
+.theme-dark {
+    --overlayColor: var(--overlayDark);
+}
+.theme-light {
+    --overlayColor: var(--overlayLight);
+}
+
+/* MAINBAR */
+
+#browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
+#browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
+    min-height: calc(44px / var(--uiZoomLevel));
+}
+
+.density-on .UrlBar-SearchField, 
+.density-on .UrlBar-AddressField {
+    height: 34px;
+}
+
+.disable-titlebar#browser.win .window-buttongroup {
+    height: 44px;
+}
+
+#browser.win .window-buttongroup button.window-close {
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius); 
+}
+
+.mainbar {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin: 5px;
+    border-radius: var(--radius);
+}
+
+.SearchField, .UrlBar-AddressField {
+    border: none !important;
+    background-color: transparent;
+}
+
+.SearchField:hover, .UrlBar-AddressField:hover,
+.color-behind-tabs-on .SearchField:focus-within, 
+.color-behind-tabs-on .MailSearchField-Inner:focus-within, 
+.color-behind-tabs-on .UrlBar-AddressField:focus-within {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.UrlFragment-Wrapper--ShouldHighlight {
+    --HighlightColor: var(--colorFg);
+    --LowlightColor: var(--colorFg);
+}
+
+.address-top .mainbar { border-bottom: none; }
+
+.mainbar button:hover,
+#browser:not(.tabs-top) .vivaldi:hover, 
+#browser:not(.tabs-top) .vivaldi:focus-visible,
+.theme-dark#browser.win .window-buttongroup button:hover {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(6px);
+}
+
+.disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi {
+    margin: 0 5px;
+}
+
+/* SIDEBAR */
+
+#switch { padding-top: 5px; }
+
+div#main.right #panels-container {
+    padding-bottom: 5px;
+    min-width: 44px;
+}
+
+.density-on #switch {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    padding-bottom: 5px;
+    padding-right: 4px;
+    min-width: 44px;
+}
+
+#panels-container { background-color: transparent; margin-right: 5px; }
+
+#panels .webpanel-stack .webpanel .webpanel-content {
+    margin-right: 7px;
+    border-bottom-right-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+#panels-container.right:not(.icons) .panel-group, 
+#panels-container.right.icons:not(:has(.SlideBar)) { border-left: none; }
+
+#panels-container.overlay .panel-group,
+.ExtensionToggleIcon.ExtensionToggleIcon--Expanded,
+.ExtensionIcon--Hidden { background-color: transparent; }
+
+#panels-container button:hover,
+.ExtensionIcon--Hidden:hover, 
+.ExtensionIcon--Hidden:active,
+.toolbar-panel > .button-toolbar > button.button-pressed, 
+.toolbar-panel .toolbar-extensions .button-toolbar > button.button-pressed, 
+.toolbar-panel .page-zoom-controls .button-toolbar > button.button-pressed,
+.density-on #switch .addwebpanel-wrapper > button.active button, 
+.density-on #switch > .button-toolbar.active button, 
+.density-on #switch > * > .button-toolbar.active button, 
+.density-on #switch > button.active button {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(6px);
+}
+
+/* WORKSPACES */
+
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar,
+.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar {
+    color: var(--colorFg);
+    margin-top: 5px;
+}
+
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar > button:active,
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar > button:active,
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover,
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(6px);
+}
+
+/* TABS */
+
+#browser .tabbar-wrapper, #browser.tabs-top #header { background-color: transparent; }
+
+#browser:not(.transparent-tabbar) #tabs-tabbar-container {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin: 2px 5px 0 5px;
+    border-radius: var(--radius);
+}
+
+#browser.color-behind-tabs-on .tab.active.active,
+#browser .tab-position.colored .tab.active,
+#browser .tab-position.colored .tab:not(.active),
+#browser .tab-position.colored.accordion-toggle-arrow {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* hover states */
+#tabs-container .tab:not(.tab-group,.tab.active):hover,
+#browser .tab-position.colored.accordion-toggle-arrow:hover, 
+#browser .tab-position.colored .tab:not(.active):hover {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(6px);
+}
+
+.tab.active .favicon { filter: none !important; }
+
+#browser .tab-position.colored .stack-counter {
+    background-color: var(--colorHighlightBg);
+}
+
+/* INNER ROUND BORDERS */
+
+#browser:not(.fullscreen) #webpage-stack {
+    border-radius: var(--radius);
+    margin: 0 5px 5px 5px;
+}
+
+/* SPEED DIAL */
+.SpeedDial--Thumbnail {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: none;
+}
+
+/* CTRL+F */
+.find-in-page-wrapper {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Transparent active tab background */
+.tab.active {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.2s ease;
+}
+.tab.active::after { background: transparent !important; }
+
+/* BOOKMARK BAR */
+.bookmark-bar {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius);
+    margin: 4px;
+    padding: 4px 8px;
+    min-height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.bookmark-bar .observer { background: transparent !important; }
+
+.bookmark-bar button,
+.bookmark-bar .button-toolbar > button,
+.bookmark-bar .bookmark-item,
+.bookmark-bar .bookmarkbar-item,
+.bookmark-bar .toolbar > .button-toolbar > button {
+    background-color: transparent !important;
+    color: var(--colorFg) !important;
+    border: none !important;
+    border-radius: var(--radius);
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 0 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    transition: background-color 0.2s ease, backdrop-filter 0.2s ease, color 0.2s ease;
+}
+
+.bookmark-bar .button-title,
+.bookmark-bar .title,
+.bookmark-bar .bookmark-label { color: var(--colorFg) !important; }
+
+.bookmark-bar button:hover,
+.bookmark-bar .button-toolbar > button:hover,
+.bookmark-bar .bookmark-item:hover,
+.bookmark-bar .bookmarkbar-item:hover {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(calc(var(--blurStrength) * 0.5));
+    -webkit-backdrop-filter: blur(calc(var(--blurStrength) * 0.5));
+}
+
+.bookmark-bar button:active,
+.bookmark-bar .button-toolbar > button:active,
+.bookmark-bar .bookmark-item:active,
+.bookmark-bar .bookmarkbar-item:active,
+.bookmark-bar .button-toolbar > button[aria-pressed="true"] {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(calc(var(--blurStrength) * 0.7));
+    -webkit-backdrop-filter: blur(calc(var(--blurStrength) * 0.7));
+}
+
+.bookmark-bar .separator {
+    opacity: 0.5;
+    border-right: 1px solid color-mix(in srgb, var(--colorFg), transparent 60%) !important;
+}
