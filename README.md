@@ -93,6 +93,6 @@ made the navigation bar adaptive
 Update 5
 ----
 Merged pull request - Recenter New tab/bin/cloud icons on the tab bar , thnx Ryfters
+
 Added version number
 
-=
