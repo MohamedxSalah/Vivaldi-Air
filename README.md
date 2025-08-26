@@ -1,5 +1,5 @@
 # Vivaldi air
-A fork of Operaldi, designed for horizontal tabs WITH BLUR and tweaks for horizontal tabs
+A fork of Operaldi, WITH BLUR and tweaks for horizontal tabs
 
 Screenshots:
 
