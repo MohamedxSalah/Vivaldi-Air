@@ -75,3 +75,7 @@ update 3
 ----
 fix right sidebar margin issue 
 fix inner corners margin issue when hiding sidebar
+----
+update 4
+----
+made the navigation bar adaptive
