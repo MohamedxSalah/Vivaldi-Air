@@ -151,9 +151,28 @@ div#main.right #panels-container {
     background-color: var(--overlayColor);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    margin: 2px 5px 0 5px;
+    margin: 5px 5px 0 5px;
     border-radius: var(--radius);
 }
+
+#titlebar {
+    position: absolute;
+    width: 100%;
+    left: 5px;
+    top: 5px;
+    right: 0px;
+    pointer-events: none;
+}
+
+#browser.win .window-buttongroup {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    overflow: hidden;
+    line-height: initial;
+}
+
+
 
 #browser.color-behind-tabs-on .tab.active.active,
 #browser .tab-position.colored .tab.active,
@@ -481,4 +500,3 @@ button.button-startpage:after { content: unset; }
 /* ========================================================= */
 /* END STARTPAGE NAVIGATION */
 /* ========================================================= */
-
