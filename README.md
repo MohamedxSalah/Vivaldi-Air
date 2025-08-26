@@ -70,3 +70,8 @@ Start page Navigation bar is now themed thanks to
 Update 2 
 -----
 fixed INNER ROUND BORDERS margin 
+----
+update 3 
+----
+fix right sidebar margin issue 
+fix inner corners margin issue when hiding sidebar
