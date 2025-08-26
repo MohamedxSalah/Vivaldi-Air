@@ -54,3 +54,10 @@ Configuration steps:
   12) Rightclick tab stacking > Edit... > Choose any color to use design from CSS (only if you are using tab stacking), repeat for every tab stacking
   13) Restart Vivaldi
   14) Enjoy your new CSS
+
+------------
+Update 1
+-----------
+Start page search bar is now blurred 
+Start page Navigation bar is now themed thanks to 
+"https://forum.vivaldi.net/topic/47116/transparent-startpage-navigation-bar-configurable"
