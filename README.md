@@ -61,3 +61,5 @@ Update 1
 Start page search bar is now blurred 
 Start page Navigation bar is now themed thanks to 
 "https://forum.vivaldi.net/topic/47116/transparent-startpage-navigation-bar-configurable"
+
+<img width="1557" height="975" alt="image" src="https://github.com/user-attachments/assets/f508c30d-b126-4996-a196-5710b19e5e4d" />
