@@ -100,7 +100,7 @@ div#main.right #panels-container {
     min-width: 44px;
 }
 
-#panels-container { background-color: transparent; margin-right: 5px; }
+#panels-container { background-color: transparent; }
 
 #panels .webpanel-stack .webpanel .webpanel-content {
     margin-right: 7px;
@@ -184,7 +184,7 @@ div#main.right #panels-container {
 
 #browser:not(.fullscreen) #webpage-stack {
     border-radius: var(--radius);
-    margin: 0 5px 5px 0px;
+    margin: 0 5px 5px 5px;
 }
 
 /* SPEED DIAL */
