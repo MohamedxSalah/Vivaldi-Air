@@ -1,5 +1,5 @@
 /* TODO
-adaptive overlays now fixed for light + dark
+Suggestions?
 */
 
 :root {
@@ -270,3 +270,4 @@ div#main.right #panels-container {
     opacity: 0.5;
     border-right: 1px solid color-mix(in srgb, var(--colorFg), transparent 60%) !important;
 }
+
