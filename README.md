@@ -1,13 +1,19 @@
-# Operaldi
-My custom CSS for Vivaldi, inspired by Opera
+# Vivaldi air
+A fork of Operaldi, designed for horizontal tabs WITH BLUR and tweaks for horizontal tabs
 
 Screenshots:
 
-<img width="1920" height="1032" alt="image" src="https://github.com/user-attachments/assets/19ff508d-e57a-4524-9923-e56f89109f4f" />
+Dark mode
+<img width="1914" height="1024" alt="image" src="https://github.com/user-attachments/assets/8e3b9b6a-3624-476e-82ad-bab0c4bc56b9" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/ed07c2f4-2d90-4f0a-a673-3706dda6c315" />
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/1011ce22-8d85-48cb-b6fd-c11c2f9b89de" />
+<img width="1917" height="1019" alt="image" src="https://github.com/user-attachments/assets/7e087457-947b-417d-85ec-9ee976991b84" />
 
-<img width="1080" height="580" alt="image" src="https://github.com/user-attachments/assets/b337f467-ba56-4705-8296-78b6a7f904dd" />
-
-<img width="1080" height="580" alt="image" src="https://github.com/user-attachments/assets/2886a50d-bf9c-4f8d-85c9-c9184b8cd40a" />
+Light mode
+<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/8f6c5faf-f129-4063-bd6f-75a54452843d" />
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/65c3bca6-4855-43fa-8288-41e5881ef953" />
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/1842cfa6-b54b-4f43-8a44-4ff59fcd2b17" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/8d4f5dcb-461d-4453-85e5-727c53e4bb67" />
 
 
 Configuration steps:
