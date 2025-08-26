@@ -328,8 +328,8 @@ div#main.right #panels-container {
     --startpageNavBtnRounding: 14px;
     --startpageNavBtnHeight: 23px;
     --startpageNavBtnMargin: 10px;
-    --startpageNavPaddingOnTop: 10px;       /* Reduced vertical spacing */
-    --startpageNavPaddingOnBottom: 10px;    /* Reduced vertical spacing */
+    --startpageNavPaddingOnTop: 10px;       /* Vertical spacing */
+    --startpageNavPaddingOnBottom: 10px;    /* Vertical spacing */
     --startpageNavTextShadow: 0 0 2px var(--startpageNavBtnSecondary), 0 0 3px var(--startpageNavBtnSecondary), 0 0 5px var(--startpageNavBtnSecondary);
     --startpageNavIconShadow: drop-shadow(0 0 4px var(--startpageNavBtnSecondary));
 
@@ -423,14 +423,52 @@ button.button-startpage.up-level span { display: flex; }
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type { border: unset; }
 button.button-startpage:after { content: unset; }
 
-/* Add folder button tweaks */
+/* ========================================================= */
+/* ADD / PLUS BUTTON FIXES */
+/* ========================================================= */
+.startpage .startpage-navigation .button-startpage.add-set {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;                  /* remove extra padding */
+    min-width: 27px;                         /* small width */
+    height: var(--startpageNavBtnHeight);    /* match other buttons */
+    border-radius: var(--startpageNavBtnRounding) !important;
+    background-color: var(--startpageNavBtnInactive);
+    border: 1.2px solid var(--startpageNavBtnPrimary);
+    margin: 0 var(--startpageNavBtnMargin) !important;
+    text-shadow: var(--startpageNavTextShadow);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,0.2);
+    transition: 0.2s ease;
+}
+
+/* Center the SVG inside the add button */
+.startpage .startpage-navigation .button-startpage.add-set svg {
+    height: 16px;
+    width: 16px;
+    margin: 0;
+    display: block;
+}
+
+/* Hover / active for add button */
+.startpage .startpage-navigation .button-startpage.add-set:hover,
+.startpage .startpage-navigation .button-startpage.add-set.active {
+    background-color: var(--startpageNavBtnPrimary);
+    color: var(--startpageNavBtnSecondary);
+    backdrop-filter: blur(var(--startpageNavBlurStrong));
+    -webkit-backdrop-filter: blur(var(--startpageNavBlurStrong));
+}
+
+.startpage .startpage-navigation .button-startpage.add-set:hover svg path,
+.startpage .startpage-navigation .button-startpage.add-set.active svg path {
+    fill: var(--startpageNavBtnSecondary);
+}
+
+/* Add folder button tweaks (keep min width for alignment) */
 .startpage .startpage-navigation .button-startpage.add-set {
     padding-left: 1px;
     padding-right: 1px;
-    min-width: 27px;
 }
-button.button-startpage.add-set svg path { fill: var(--startpageNavBtnPrimary); }
-button.button-startpage.add-set:hover svg path { fill: var(--startpageNavBtnSecondary); }
 
 /* Speed dial items spacing fix */
 .speeddial { margin-top: 0; padding-top: 2px; }
