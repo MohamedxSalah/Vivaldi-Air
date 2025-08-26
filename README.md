@@ -7,12 +7,14 @@ Screenshots:
 Dark mode
 <img width="1914" height="1024" alt="image" src="https://github.com/user-attachments/assets/8e3b9b6a-3624-476e-82ad-bab0c4bc56b9" />
 <img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/1011ce22-8d85-48cb-b6fd-c11c2f9b89de" />
-<img width="1917" height="1019" alt="image" src="https://github.com/user-attachments/assets/7e087457-947b-417d-85ec-9ee976991b84" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e392a075-c4f8-46ce-a96a-af87dcdd0685" />
+
 
 Light mode
 <img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/8f6c5faf-f129-4063-bd6f-75a54452843d" />
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/1842cfa6-b54b-4f43-8a44-4ff59fcd2b17" />
-<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/8d4f5dcb-461d-4453-85e5-727c53e4bb67" />
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/0cfef8d8-3cfb-4ec3-8aca-d713ba2d9fe3" />
+
 
 
 Configuration steps:
