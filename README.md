@@ -108,3 +108,7 @@ Update 7
 
 Themed Tab stacks
 
+----
+update 8 
+----
+v.8 adjusting the blur in tab stack and removing unnecessary lines
