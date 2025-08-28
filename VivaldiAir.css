@@ -516,7 +516,7 @@ button.button-startpage:after { content: unset; }
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius);
-    margin: 0 5px 5px 5px;                    /* matches outer tab bar rounding */
+    margin: 3px 5px 5px 5px;                    /* matches outer tab bar rounding */
 }
 
 /* Make tabs inside the sub-row look like normal tabs */
@@ -557,4 +557,9 @@ button.button-startpage:after { content: unset; }
 /* Optional: keep the sub-row’s edges “floating” like main bar */
 #tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper {
     overflow: clip; /* avoids bleed on heavy blur */
+}
+
+/* Add padding inside parent tabbar */
+#tabs-tabbar-container {
+    padding-bottom: 5px !important;
 }
