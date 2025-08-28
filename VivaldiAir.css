@@ -1,4 +1,4 @@
-/* Vivaldi Air v.7
+/* Vivaldi Air v.8
 TODO: Suggestions?
 */
 
@@ -527,16 +527,6 @@ button.button-startpage:after { content: unset; }
     background: transparent !important;      /* let row’s blur show through */
 }
 
-/* Active + hover in the sub-row (mirror the main theme) */
-#tabs-subcontainer .tab.active,
-#tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab.active,
-#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab.active,
-#tabs-tabbar-container .tabbar-subcontainer .tab.active {
-    background: var(--overlayColor) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-}
-
 #tabs-subcontainer .tab:not(.active):hover,
 #tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab:not(.active):hover,
 #tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab:not(.active):hover,
@@ -544,19 +534,6 @@ button.button-startpage:after { content: unset; }
     background: var(--overlayColor) !important;
     backdrop-filter: blur(6px) !important;
     -webkit-backdrop-filter: blur(6px) !important;
-}
-
-/* If Vivaldi paints stack colors (7.5+), kill it so blur wins */
-#tabs-subcontainer,
-#tabs-tabbar-container [aria-label="Tab Stack Toolbar"],
-#tabs-tabbar-container .tabbar-subcontainer {
-    --tab-stack-color: transparent !important;
-    box-shadow: none !important;
-}
-
-/* Optional: keep the sub-row’s edges “floating” like main bar */
-#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper {
-    overflow: clip; /* avoids bleed on heavy blur */
 }
 
 /* Add padding inside parent tabbar */
