@@ -96,8 +96,15 @@ Merged pull request - Recenter New tab/bin/cloud icons on the tab bar, thnx Ryft
 
 Added version number
 
----
+----
 update 6
----
+----
 
 Align Window controls and Vivaldi button with tab bar and increase top padding, thnx Ryfters
+
+----
+Update 7
+----
+
+Themed Tab stacks
+
