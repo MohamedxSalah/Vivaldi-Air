@@ -1,4 +1,4 @@
-/* Vivaldi Air v.6
+/* Vivaldi Air v.7
 TODO: Suggestions?
 */
 
@@ -501,3 +501,60 @@ button.button-startpage:after { content: unset; }
 /* END STARTPAGE NAVIGATION */
 /* ========================================================= */
 
+/* =========================
+   TWO-LEVEL TAB STACK: SUB-ROW
+   ========================= */
+
+/* Cover multiple builds/selectors for the sub strip */
+#tabs-subcontainer,                                           /* common ID for sub-row */
+#tabs-tabbar-container [aria-label="Tab Stack Toolbar"],      /* ARIA label on newer builds */
+#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper,     /* sub-row is injected as next wrapper */
+#tabs-tabbar-container .tabbar-wrapper:has(.tab.is-sub),      /* fallback via :has */
+#tabs-tabbar-container .tabbar-subcontainer {                 /* some snapshots used this class */
+    background: var(--overlayColor) !important;
+    background-image: none !important;       /* defeat Colored Tab Stacks paint */
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius);
+    margin: 0 5px 5px 5px;                    /* matches outer tab bar rounding */
+}
+
+/* Make tabs inside the sub-row look like normal tabs */
+#tabs-subcontainer .tab,
+#tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab,
+#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab,
+#tabs-tabbar-container .tabbar-subcontainer .tab {
+    background: transparent !important;      /* let row’s blur show through */
+}
+
+/* Active + hover in the sub-row (mirror the main theme) */
+#tabs-subcontainer .tab.active,
+#tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab.active,
+#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab.active,
+#tabs-tabbar-container .tabbar-subcontainer .tab.active {
+    background: var(--overlayColor) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+#tabs-subcontainer .tab:not(.active):hover,
+#tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab:not(.active):hover,
+#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab:not(.active):hover,
+#tabs-tabbar-container .tabbar-subcontainer .tab:not(.active):hover {
+    background: var(--overlayColor) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+}
+
+/* If Vivaldi paints stack colors (7.5+), kill it so blur wins */
+#tabs-subcontainer,
+#tabs-tabbar-container [aria-label="Tab Stack Toolbar"],
+#tabs-tabbar-container .tabbar-subcontainer {
+    --tab-stack-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Optional: keep the sub-row’s edges “floating” like main bar */
+#tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper {
+    overflow: clip; /* avoids bleed on heavy blur */
+}
