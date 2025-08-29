@@ -1,4 +1,4 @@
-/* Vivaldi Air v.10
+/* Vivaldi Air v.11
 TODO: Suggestions?
 */
 
@@ -539,7 +539,11 @@ button.button-startpage:after { content: unset; }
 /* Add padding inside parent tabbar */
 #tabs-tabbar-container {
     padding-bottom: 5px !important;
-	padding-top: 5px !important;
+}
+
+/* Apply padding to the outer tabbar container when tabs are bottom */
+#browser.tabs-bottom #tabs-tabbar-container {
+    padding-top: 5px !important;
 }
 
 /* Bottom tabbar styling */
@@ -640,3 +644,4 @@ button.button-startpage:after { content: unset; }
 .tabs-right #tabs-tabbar-container {
     margin-bottom: 5px !important;
 }
+
