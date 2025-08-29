@@ -1,4 +1,4 @@
-/* Vivaldi Air v.9
+/* Vivaldi Air v.10
 TODO: Suggestions?
 */
 
@@ -556,4 +556,87 @@ button.button-startpage:after { content: unset; }
 /* add padding to bottom tabs when using tab stack */
 #browser.tabs-bottom #tabs-tabbar-container {
     padding-bottom: 10px !important; /* default 5px + 5px extra gap */
+}
+
+/* ========================= */
+/*         WEBPANELS         */
+/* ========================= */
+
+#panels-container.right .panel {
+    padding: 5px 13px 5px 5px; /* keep spacing */
+}
+
+#panels-container.left .panel {
+    padding: 5px 5px 5px 13px; /* flipped: left-side panels -> left inset */
+}
+
+/* Panel group container with blur + overlay */
+.panel-group {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    margin-right: 5px;
+	margin-left: 5px;
+    box-shadow: none; /* keep clean like the rest of UI */
+    transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
+}
+
+/* Remove panel header titles */
+.panel > header h1 {
+    display: none;
+}
+
+/* Remove shadow when overlay panels are active */
+#panels-container.right:not(.icons).overlay .panel-group {
+    box-shadow: none;
+}
+#panels-container.left:not(.icons).overlay .panel-group {
+    box-shadow: none;
+}
+
+/* Transparent when a web app is active, keep consistency */
+#panels-container.overlay .panel-group {
+    background-color: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+/* Webpanel content container styling */
+#panels .webpanel-stack .webpanel .webpanel-content {
+    margin-right: 7px;
+	margin-left: 7px;
+    border-bottom-right-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Fix web app panels visibility */
+#panels .webpanel-stack .webpanel.visible {
+    visibility: visible;
+    padding: 0px;
+}
+
+/* Hover/active states inside panels */
+#panels-container button:hover,
+#panels .webpanel-stack .webpanel .webpanel-content:hover {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+/* =========================== */
+/* FIX side tabs bottom margin */
+/* =========================== */
+
+/* Left side */
+.tabs-left .tabbar-wrapper {
+    margin-bottom: 5px !important;
+}
+
+/* Right side: use container instead */
+.tabs-right #tabs-tabbar-container {
+    margin-bottom: 5px !important;
 }
