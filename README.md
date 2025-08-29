@@ -5,17 +5,17 @@ Aims at mimicking Opera Air aesthetics
 Screenshots:
 
 Dark mode
-<img width="1914" height="1024" alt="image" src="https://github.com/user-attachments/assets/8e3b9b6a-3624-476e-82ad-bab0c4bc56b9" />
-<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/1011ce22-8d85-48cb-b6fd-c11c2f9b89de" />
-<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/e392a075-c4f8-46ce-a96a-af87dcdd0685" />
+
+<img width="1917" height="1018" alt="image" src="https://github.com/user-attachments/assets/2d48f820-a5a0-456c-8be8-840044eae599" />
+<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/24cb552a-0768-41e9-9cc7-6ef08a5daa39" />
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/97ff637d-a3a7-4070-be19-4f66ab08d2a8" />
 
 
 Light mode
-<img width="1919" height="1010" alt="image" src="https://github.com/user-attachments/assets/8f6c5faf-f129-4063-bd6f-75a54452843d" />
-<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/1842cfa6-b54b-4f43-8a44-4ff59fcd2b17" />
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/0cfef8d8-3cfb-4ec3-8aca-d713ba2d9fe3" />
 
-
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/4987a08d-34bd-40ca-bcdc-8ca25ee7bd8d" />
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/faeacaef-7cd0-4ee4-bd73-71d3e43459e2" />
+<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/c2215439-56cd-4eed-b47d-c1bfcde64904" />
 
 Configuration steps:
 
@@ -107,6 +107,7 @@ Update 7
 ----
 
 Themed Tab stacks
+<img width="1919" height="110" alt="image" src="https://github.com/user-attachments/assets/1b6125e6-056c-4fde-b329-e4bd545a9c94" />
 
 ----
 update 8 
@@ -119,6 +120,7 @@ update 9
 ----
 
 Themed bottom tab bar
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/063c884b-3b4b-437e-9b65-bf06e0c9109f" />
 
 ----
 update 9 hotfix
@@ -131,10 +133,19 @@ update 10
 ----
 
 add webpanels theming merged from Skolodac
+
+<img width="502" height="960" alt="image" src="https://github.com/user-attachments/assets/62053bb7-0df0-4f09-b4e6-55accd28bb07" />
+
+
 fixed bottom margin on left and right tab bar style
+
+<img width="308" height="974" alt="image" src="https://github.com/user-attachments/assets/6d0e566e-b196-48f7-b5cb-dc29b8bf70df" />
+
 
 ----
 update 11
 ----
 
 Fixed windows buttons overlay again
+
+<img width="216" height="190" alt="image" src="https://github.com/user-attachments/assets/af986138-9681-49f2-b0df-42b2a89fe896" />
