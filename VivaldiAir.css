@@ -1,4 +1,4 @@
-/* Vivaldi Air v.11
+/* Vivaldi Air v.12
 TODO: Suggestions?
 */
 
@@ -645,3 +645,11 @@ button.button-startpage:after { content: unset; }
     margin-bottom: 5px !important;
 }
 
+/* ============================================= */
+/* Fix missing margin between bottom and sidebar */
+/* ============================================= */
+
+#browser #panels-container.left,
+#browser #panels-container.right {
+    margin-bottom: 5px !important;
+}
