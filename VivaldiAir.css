@@ -1,4 +1,4 @@
-/* Vivaldi Air v.14
+/* Vivaldi Air v.14.1
 TODO: Suggestions?
 */
 
@@ -674,14 +674,20 @@ button.button-startpage:after { content: unset; }
 /* Horizontal Menu Styling */
 /* ======================= */
 
+/* Make sure header/titlebar don't override */
+#browser #header,
+#browser #titlebar {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
 .menubar {
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius) !important;
     margin: 4px;
-    padding: 2px 6px;
-    height: 28px !important; /* tweak as needed */
+    height: 28px !important; 
     display: flex;
     align-items: center;
 }
@@ -707,3 +713,4 @@ button.button-startpage:after { content: unset; }
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(8px) !important;
 }
+
