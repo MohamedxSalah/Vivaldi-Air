@@ -149,3 +149,11 @@ update 11
 Fixed windows buttons overlay again
 
 <img width="216" height="190" alt="image" src="https://github.com/user-attachments/assets/af986138-9681-49f2-b0df-42b2a89fe896" />
+
+---
+Update 12
+---
+
+Fix missing margin between bottom and sidebar
+
+<img width="507" height="1027" alt="image" src="https://github.com/user-attachments/assets/2b8b2732-4a72-4a95-b278-4aa0a452d28c" />
