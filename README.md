@@ -111,4 +111,30 @@ Themed Tab stacks
 ----
 update 8 
 ----
+
 v.8 adjusting the blur in tab stack and removing unnecessary lines
+
+----
+update 9 
+----
+
+Themed bottom tab bar
+
+----
+update 9 hotfix
+----
+
+bug fix: add padding to bottom tabs when using tab stack
+
+----
+update 10
+----
+
+add webpanels theming merged from Skolodac
+fixed bottom margin on left and right tab bar style
+
+----
+update 11
+----
+
+Fixed windows buttons overlay again
