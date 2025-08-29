@@ -1,4 +1,4 @@
-/* Vivaldi Air v.12
+/* Vivaldi Air v.13
 TODO: Suggestions?
 */
 
@@ -652,4 +652,20 @@ button.button-startpage:after { content: unset; }
 #browser #panels-container.left,
 #browser #panels-container.right {
     margin-bottom: 5px !important;
+}
+
+/* ======================================================== */
+/* Collapse header/titlebar completely when tabs are hidden */
+/* ======================================================== */
+
+#browser.tabs-off #header,
+#browser.tabs-off #titlebar {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
 }
