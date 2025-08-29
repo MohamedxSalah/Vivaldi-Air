@@ -185,4 +185,5 @@ update 15
 ---
 
 fix sidebar webpanel content when it is on the right , as content appeared missaligned
+
 clean sidebar code
