@@ -157,3 +157,15 @@ Update 12
 Fix missing margin between bottom and sidebar
 
 <img width="507" height="1027" alt="image" src="https://github.com/user-attachments/assets/2b8b2732-4a72-4a95-b278-4aa0a452d28c" />
+
+---
+Update 13
+---
+
+Collapse header/titlebar completely when tabs are hidden
+
+Before
+<img width="1918" height="134" alt="image" src="https://github.com/user-attachments/assets/a8ae43d8-5d07-4755-995c-eba43c11c788" />
+
+After
+<img width="1918" height="174" alt="image" src="https://github.com/user-attachments/assets/86822624-c983-4ff2-b61f-9d3c35298945" />
