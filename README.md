@@ -178,3 +178,4 @@ for those who likes horizontal menu , it's now styled!
 
 <img width="1918" height="227" alt="image" src="https://github.com/user-attachments/assets/df8770b8-f006-470c-b000-a4c1ce73617f" />
 
+v14.1 : hotfix to horizontal menu bar theming, now it works with other tab styles
