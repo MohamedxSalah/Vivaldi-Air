@@ -1,4 +1,4 @@
-/* Vivaldi Air v.14.1
+/* Vivaldi Air v.15
 TODO: Suggestions?
 */
 
@@ -83,9 +83,12 @@ TODO: Suggestions?
 
 /* SIDEBAR */
 
-#switch { padding-top: 5px; }
+#switch { 
+    padding-top: 5px; 
+}
 
-div#main.right #panels-container {
+div#main.right #panels-container,
+div#main.left #panels-container {
     padding-bottom: 5px;
 }
 
@@ -99,7 +102,9 @@ div#main.right #panels-container {
     min-width: 44px;
 }
 
-#panels-container { background-color: transparent; }
+#panels-container { 
+    background-color: transparent; 
+}
 
 #panels .webpanel-stack .webpanel .webpanel-content {
     margin-right: 7px;
@@ -107,12 +112,19 @@ div#main.right #panels-container {
     border-top-right-radius: var(--radius);
 }
 
-#panels-container.right:not(.icons) .panel-group, 
-#panels-container.right.icons:not(:has(.SlideBar)) { border-left: none; }
+/* Apply for both left & right */
+#panels-container.right:not(.icons) .panel-group,
+#panels-container.left:not(.icons) .panel-group,
+#panels-container.right.icons:not(:has(.SlideBar)),
+#panels-container.left.icons:not(:has(.SlideBar)) { 
+    border-left: none; 
+}
 
 #panels-container.overlay .panel-group,
 .ExtensionToggleIcon.ExtensionToggleIcon--Expanded,
-.ExtensionIcon--Hidden { background-color: transparent; }
+.ExtensionIcon--Hidden { 
+    background-color: transparent; 
+}
 
 #panels-container button:hover,
 .ExtensionIcon--Hidden:hover, 
@@ -127,6 +139,7 @@ div#main.right #panels-container {
     background-color: var(--overlayColor);
     backdrop-filter: blur(6px);
 }
+
 
 /* WORKSPACES */
 
@@ -566,25 +579,24 @@ button.button-startpage:after { content: unset; }
 /*         WEBPANELS         */
 /* ========================= */
 
-#panels-container.right .panel {
-    padding: 5px 13px 5px 5px; /* keep spacing */
-}
-
 #panels-container.left .panel {
     padding: 5px 5px 5px 13px; /* flipped: left-side panels -> left inset */
 }
 
-/* Panel group container with blur + overlay */
+/* panel group container with blur / Base: no horizontal margins by default */
 .panel-group {
     background-color: var(--overlayColor);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
-    margin-right: 5px;
-	margin-left: 5px;
-    box-shadow: none; /* keep clean like the rest of UI */
+    margin: 0;
+    box-shadow: none;
     transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
 }
+
+/* Apply outer margin only to the side that owns the panels */
+#panels-container.left  .panel-group { margin-left: 5px;  margin-right: 0; }
+#panels-container.right .panel-group { margin-right: 5px; margin-left:  0; }
 
 /* Remove panel header titles */
 .panel > header h1 {
@@ -713,4 +725,5 @@ button.button-startpage:after { content: unset; }
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(8px) !important;
 }
+
 
