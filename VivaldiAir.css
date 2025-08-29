@@ -552,3 +552,8 @@ button.button-startpage:after { content: unset; }
 #browser.tabs-bottom #footer {
     background: transparent !important;
 }
+
+/* add padding to bottom tabs when using tab stack */
+#browser.tabs-bottom #tabs-tabbar-container {
+    padding-bottom: 10px !important; /* default 5px + 5px extra gap */
+}
