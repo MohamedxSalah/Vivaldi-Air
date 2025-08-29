@@ -169,3 +169,12 @@ Before
 
 After
 <img width="1918" height="174" alt="image" src="https://github.com/user-attachments/assets/86822624-c983-4ff2-b61f-9d3c35298945" />
+
+---
+Update 14
+---
+
+for those who likes horizontal menu , it's now styled!
+
+<img width="1918" height="227" alt="image" src="https://github.com/user-attachments/assets/df8770b8-f006-470c-b000-a4c1ce73617f" />
+
