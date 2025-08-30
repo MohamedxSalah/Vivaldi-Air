@@ -139,7 +139,8 @@ Do translate menu
 }
 
 #panels .webpanel-stack .webpanel .webpanel-content {
-    margin: 6px;
+    margin: 5px;
+    margin-bottom: 0;
     border-radius: var(--radius);
 }
 
@@ -755,6 +756,7 @@ button.button-startpage:after { content: unset; }
     background-color: var(--bg) !important;
     backdrop-filter: var(--blurMedHigh) !important;
 }
+
 
 
 
