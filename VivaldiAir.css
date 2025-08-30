@@ -450,6 +450,12 @@ button.button-startpage.up-level span { display: flex; }
     justify-content: center;
 }
 
+/* Startpage widgets */
+.Dashboard-Widgets .dashboard-widget {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px) !important;
+}
+
 /* Remove borders & extra styling */
 .startpage .startpage-navigation .startpage-navigation-group:last-of-type { border: unset; }
 button.button-startpage:after { content: unset; }
@@ -725,5 +731,6 @@ button.button-startpage:after { content: unset; }
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(8px) !important;
 }
+
 
 
