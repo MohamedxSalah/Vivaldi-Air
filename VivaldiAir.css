@@ -81,50 +81,51 @@ TODO: Suggestions?
     margin: 0 5px;
 }
 
+
 /* SIDEBAR */
+/* TODO FIX OVERLAY AND KEEP URL NORMAL WHEN FULL SIDEBAR */
 
-#switch { 
-    padding-top: 5px; 
+#panels-container.overlay:not(.icons) .panel-group {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
 }
 
-div#main.right #panels-container,
-div#main.left #panels-container {
+#panels-container.left { margin-left: 5px; }  
+#panels-container.left:not(.icons) #panels .panel-group {
+    border-right: none;
+}
+
+#panels-container.right { margin-right: 5px; }  
+#panels-container.right:not(.icons) #panels .panel-group {
+    border-left: none;
+}
+
+#switch {
     padding-bottom: 5px;
+    min-width: 44px;
 }
 
-.density-on #switch {
+#panels-container {
+    margin-bottom: 5px;
     background-color: var(--overlayColor);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
-    padding-bottom: 5px;
-    padding-right: 4px;
     min-width: 44px;
-}
-
-#panels-container { 
-    background-color: transparent; 
+    width: fit-content;
 }
 
 #panels .webpanel-stack .webpanel .webpanel-content {
-    margin-right: 7px;
+    margin-left: 7px;
     border-bottom-right-radius: var(--radius);
     border-top-right-radius: var(--radius);
 }
 
-/* Apply for both left & right */
-#panels-container.right:not(.icons) .panel-group,
-#panels-container.left:not(.icons) .panel-group,
-#panels-container.right.icons:not(:has(.SlideBar)),
-#panels-container.left.icons:not(:has(.SlideBar)) { 
-    border-left: none; 
-}
-
 #panels-container.overlay .panel-group,
 .ExtensionToggleIcon.ExtensionToggleIcon--Expanded,
-.ExtensionIcon--Hidden { 
-    background-color: transparent; 
-}
+.ExtensionIcon--Hidden { background-color: transparent; }
 
 #panels-container button:hover,
 .ExtensionIcon--Hidden:hover, 
@@ -754,6 +755,7 @@ button.button-startpage:after { content: unset; }
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(8px) !important;
 }
+
 
 
 
