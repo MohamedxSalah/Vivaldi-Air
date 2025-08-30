@@ -140,6 +140,29 @@ div#main.left #panels-container {
     backdrop-filter: blur(6px);
 }
 
+/* STATUS BAR */
+footer#footer {
+    background: none !important;
+    border-top: none !important;
+}
+
+footer .toolbar-statusbar {
+    background-color: var(--overlayColor);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    margin: 0 5px 5px 5px;
+}
+
+.StatusInfo-Content {
+    background-color: var(--overlayColor) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border-radius: var(--radius) !important;
+    padding-bottom: 5px !important;
+    margin: 0 0 5px 13px !important;
+    border: none !important;
+}
 
 /* WORKSPACES */
 
@@ -731,6 +754,7 @@ button.button-startpage:after { content: unset; }
     background-color: var(--overlayColor) !important;
     backdrop-filter: blur(8px) !important;
 }
+
 
 
 
