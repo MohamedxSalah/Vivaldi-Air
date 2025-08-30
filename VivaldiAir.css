@@ -1,29 +1,47 @@
 /* Vivaldi Air v.15
 TODO: Suggestions?
+Fix sorting in panels
+Fix tree items
+Fix checkboxes
+Fix floating panels
+Do translate menu
 */
 
 :root {
-    --lessTransparent: rgba(0,0,0,0.4); /* fallback */
     --customRadius: 8px; /* NOT USING NOW */
 
-    /* New adaptive overlay system */
-    --overlayDark: rgba(0, 0, 0, 0.4);
-    --overlayLight: rgba(255, 255, 255, 0.4);
+    --bgDark: rgba(0, 0, 0, 0.4);
+    --bgLight: rgba(255, 255, 255, 0.4);
+    
+    --bgDisabledDark: rgba(0, 0, 0, 0.2);
+    --bgDisabledLight: rgba(255, 255, 255, 0.2);
+
+    --blurLow: blur(4px);
+    --blurMed: blur(6px);
+    --blurMedHigh: blur(8px);
+    --blurHigh: blur(12px);
+
+    --hoverBlur: var(--blurMed);
+
+    --space: 5px;
+
 }
 
 /* set theme-aware overlay */
 .theme-dark {
-    --overlayColor: var(--overlayDark);
+    --bg: var(--bgDark);
+    --bgDisabled: --bgDisabledDark
 }
 .theme-light {
-    --overlayColor: var(--overlayLight);
+    --bg: var(--bgLight);
+    --bgDisabled: --bgDisabledLight
 }
 
 /* MAINBAR */
 
 #browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
 #browser.linux.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar) {
-    min-height: calc(44px / var(--uiZoomLevel));
+    min-height: calc(42px / var(--uiZoomLevel));
 }
 
 .density-on .UrlBar-SearchField, 
@@ -41,7 +59,7 @@ TODO: Suggestions?
 }
 
 .mainbar {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin: 5px;
@@ -57,7 +75,7 @@ TODO: Suggestions?
 .color-behind-tabs-on .SearchField:focus-within, 
 .color-behind-tabs-on .MailSearchField-Inner:focus-within, 
 .color-behind-tabs-on .UrlBar-AddressField:focus-within {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -73,8 +91,8 @@ TODO: Suggestions?
 #browser:not(.tabs-top) .vivaldi:hover, 
 #browser:not(.tabs-top) .vivaldi:focus-visible,
 .theme-dark#browser.win .window-buttongroup button:hover {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(6px);
+    background-color: var(--bg);
+    backdrop-filter: var(--blurMed);
 }
 
 .disable-titlebar.address-top#browser:not(.tabs-top) .vivaldi {
@@ -83,10 +101,9 @@ TODO: Suggestions?
 
 
 /* SIDEBAR */
-/* TODO FIX OVERLAY AND KEEP URL NORMAL WHEN FULL SIDEBAR */
 
 #panels-container.overlay:not(.icons) .panel-group {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
@@ -109,7 +126,7 @@ TODO: Suggestions?
 
 #panels-container {
     margin-bottom: 5px;
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
@@ -117,10 +134,59 @@ TODO: Suggestions?
     width: fit-content;
 }
 
+#panels {
+    padding-bottom: 5px;
+}
+
 #panels .webpanel-stack .webpanel .webpanel-content {
-    margin-left: 7px;
-    border-bottom-right-radius: var(--radius);
-    border-top-right-radius: var(--radius);
+    margin: 6px;
+    border-radius: var(--radius);
+}
+
+#panels .webpanel-stack .webpanel .webpanel-header {
+    box-shadow: none !important;
+    padding-bottom: 0;
+}
+
+/* basic components */
+#panels input,
+#panels label:not(div.tree-row > label):not(.disabled),
+#panels textarea {
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    border: none;
+    box-shadow: none;
+}
+
+#panels .sortselector {
+    border: none !important;
+    background-color: var(--bg);
+}
+
+#panels .sortselector-button {
+    background-color: none !important;
+    height: calc(var(--treeViewRowHeight) - 2px);
+}
+
+#panels .vivaldi-tree .tree-row {
+    background-color: var(--bg) !important;
+}
+
+.panel-group .button-toolbar > button {
+    background-color: var(--bg) !important;
+    background-image: none !important;
+    border: none !important;
+}
+.panel-group .button-toolbar > button:disabled {
+    background-color: var(--bgDisabled) !important;
+}
+
+/* New note textbox */
+.NotesEditor-Editor-Background:after { visibility: hidden; }
+.NotesEditor-EmptyPlaceholder:hover {
+    background-color: var(--bg);
+    outline: none;
+    border-radius: var(--radius);
 }
 
 #panels-container.overlay .panel-group,
@@ -137,8 +203,8 @@ TODO: Suggestions?
 .density-on #switch > .button-toolbar.active button, 
 .density-on #switch > * > .button-toolbar.active button, 
 .density-on #switch > button.active button {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(6px);
+    background-color: var(--bg);
+    backdrop-filter: var(--blurMed);
 }
 
 /* STATUS BAR */
@@ -148,19 +214,21 @@ footer#footer {
 }
 
 footer .toolbar-statusbar {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    background-color: var(--bg);
     border-radius: var(--radius);
     margin: 0 5px 5px 5px;
 }
 
-.StatusInfo-Content {
-    background-color: var(--overlayColor) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+.inner > .StatusInfo > .StatusInfo-Content {
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurLow) !important;
+    -webkit-backdrop-filter: var(--blurLow) !important;
     border-radius: var(--radius) !important;
     padding-bottom: 5px !important;
+    background-color: var(--bg);
     margin: 0 0 5px 13px !important;
     border: none !important;
 }
@@ -176,8 +244,8 @@ footer .toolbar-statusbar {
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar > button:active,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(6px);
+    background-color: var(--bg);
+    backdrop-filter: var(--blurMed);
 }
 
 /* TABS */
@@ -185,7 +253,7 @@ footer .toolbar-statusbar {
 #browser .tabbar-wrapper, #browser.tabs-top #header { background-color: transparent; }
 
 #browser:not(.transparent-tabbar) #tabs-tabbar-container {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     margin: 5px 5px 0 5px;
@@ -215,7 +283,7 @@ footer .toolbar-statusbar {
 #browser .tab-position.colored .tab.active,
 #browser .tab-position.colored .tab:not(.active),
 #browser .tab-position.colored.accordion-toggle-arrow {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -224,8 +292,8 @@ footer .toolbar-statusbar {
 #tabs-container .tab:not(.tab-group,.tab.active):hover,
 #browser .tab-position.colored.accordion-toggle-arrow:hover, 
 #browser .tab-position.colored .tab:not(.active):hover {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(6px);
+    background-color: var(--bg);
+    backdrop-filter:  var(--blurMed);
 }
 
 .tab.active .favicon { filter: none !important; }
@@ -243,7 +311,7 @@ footer .toolbar-statusbar {
 
 /* SPEED DIAL */
 .SpeedDial--Thumbnail {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: none;
@@ -251,14 +319,14 @@ footer .toolbar-statusbar {
 
 /* CTRL+F */
 .find-in-page-wrapper {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
 /* Transparent active tab background */
 .tab.active {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: background-color 0.2s ease;
@@ -267,7 +335,7 @@ footer .toolbar-statusbar {
 
 /* BOOKMARK BAR */
 .bookmark-bar {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius);
@@ -305,7 +373,7 @@ footer .toolbar-statusbar {
 .bookmark-bar .button-toolbar > button:hover,
 .bookmark-bar .bookmark-item:hover,
 .bookmark-bar .bookmarkbar-item:hover {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(calc(var(--blurStrength) * 0.5));
     -webkit-backdrop-filter: blur(calc(var(--blurStrength) * 0.5));
 }
@@ -315,7 +383,7 @@ footer .toolbar-statusbar {
 .bookmark-bar .bookmark-item:active,
 .bookmark-bar .bookmarkbar-item:active,
 .bookmark-bar .button-toolbar > button[aria-pressed="true"] {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(calc(var(--blurStrength) * 0.7));
     -webkit-backdrop-filter: blur(calc(var(--blurStrength) * 0.7));
 }
@@ -334,9 +402,9 @@ footer .toolbar-statusbar {
 .StartPage .SearchField:not(:hover):not(:focus-within),
 .SpeedDial .SearchField:not(:hover):not(:focus-within),
 .SpeedDialView .SearchField:not(:hover):not(:focus-within) {
-    background-color: var(--overlayColor) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurMed) !important;
+    -webkit-backdrop-filter: var(--blurMed) !important;
     border-radius: var(--radius) !important;
     box-shadow: none !important;
     transition: background-color 0.18s ease, backdrop-filter 0.18s ease;
@@ -351,7 +419,7 @@ footer .toolbar-statusbar {
 .SpeedDial .SearchField:focus-within,
 .SpeedDialView .SearchField:hover,
 .SpeedDialView .SearchField:focus-within {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius) !important; /* keep corners consistent */
@@ -395,7 +463,7 @@ footer .toolbar-statusbar {
 
 /* Startpage Nav Bar container */
 .startpage .startpage-navigation {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(var(--startpageNavBlur));
     -webkit-backdrop-filter: blur(var(--startpageNavBlur));
     box-shadow: unset;
@@ -476,7 +544,7 @@ button.button-startpage.up-level span { display: flex; }
 
 /* Startpage widgets */
 .Dashboard-Widgets .dashboard-widget {
-    background-color: var(--overlayColor);
+    background-color: var(--bg);
     backdrop-filter: blur(12px) !important;
 }
 
@@ -554,7 +622,7 @@ button.button-startpage:after { content: unset; }
 #tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper,     /* sub-row is injected as next wrapper */
 #tabs-tabbar-container .tabbar-wrapper:has(.tab.is-sub),      /* fallback via :has */
 #tabs-tabbar-container .tabbar-subcontainer {                 /* some snapshots used this class */
-    background: var(--overlayColor) !important;
+    background: var(--bg) !important;
     background-image: none !important;       /* defeat Colored Tab Stacks paint */
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
@@ -574,19 +642,19 @@ button.button-startpage:after { content: unset; }
 #tabs-tabbar-container [aria-label="Tab Stack Toolbar"] .tab:not(.active):hover,
 #tabs-tabbar-container .tabbar-wrapper + .tabbar-wrapper .tab:not(.active):hover,
 #tabs-tabbar-container .tabbar-subcontainer .tab:not(.active):hover {
-    background: var(--overlayColor) !important;
-    backdrop-filter: blur(6px) !important;
-    -webkit-backdrop-filter: blur(6px) !important;
+    background: var(--bg) !important;
+    backdrop-filter: var(--blurMed) !important;
+    -webkit-backdrop-filter: var(--blurMed) !important;
 }
 
 /* Add padding inside parent tabbar */
 #tabs-tabbar-container {
-    padding-bottom: 5px !important;
+    padding-bottom: 6px !important;
 }
 
 /* Apply padding to the outer tabbar container when tabs are bottom */
 #browser.tabs-bottom #tabs-tabbar-container {
-    padding-top: 5px !important;
+    padding-top: 6px !important;
 }
 
 /* Bottom tabbar styling */
@@ -603,74 +671,6 @@ button.button-startpage:after { content: unset; }
 /* add padding to bottom tabs when using tab stack */
 #browser.tabs-bottom #tabs-tabbar-container {
     padding-bottom: 10px !important; /* default 5px + 5px extra gap */
-}
-
-/* ========================= */
-/*         WEBPANELS         */
-/* ========================= */
-
-#panels-container.left .panel {
-    padding: 5px 5px 5px 13px; /* flipped: left-side panels -> left inset */
-}
-
-/* panel group container with blur / Base: no horizontal margins by default */
-.panel-group {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: var(--radius);
-    margin: 0;
-    box-shadow: none;
-    transition: background-color 0.2s ease, backdrop-filter 0.2s ease;
-}
-
-/* Apply outer margin only to the side that owns the panels */
-#panels-container.left  .panel-group { margin-left: 5px;  margin-right: 0; }
-#panels-container.right .panel-group { margin-right: 5px; margin-left:  0; }
-
-/* Remove panel header titles */
-.panel > header h1 {
-    display: none;
-}
-
-/* Remove shadow when overlay panels are active */
-#panels-container.right:not(.icons).overlay .panel-group {
-    box-shadow: none;
-}
-#panels-container.left:not(.icons).overlay .panel-group {
-    box-shadow: none;
-}
-
-/* Transparent when a web app is active, keep consistency */
-#panels-container.overlay .panel-group {
-    background-color: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-}
-
-/* Webpanel content container styling */
-#panels .webpanel-stack .webpanel .webpanel-content {
-    margin-right: 7px;
-	margin-left: 7px;
-    border-bottom-right-radius: var(--radius);
-    border-top-right-radius: var(--radius);
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-/* Fix web app panels visibility */
-#panels .webpanel-stack .webpanel.visible {
-    visibility: visible;
-    padding: 0px;
-}
-
-/* Hover/active states inside panels */
-#panels-container button:hover,
-#panels .webpanel-stack .webpanel .webpanel-content:hover {
-    background-color: var(--overlayColor);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
 }
 
 /* =========================== */
@@ -724,7 +724,7 @@ button.button-startpage:after { content: unset; }
 }
 
 .menubar {
-    background-color: var(--overlayColor) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
     -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius) !important;
@@ -745,17 +745,16 @@ button.button-startpage:after { content: unset; }
 
 /* Hover */
 .menubar > .menuitem:hover {
-    background-color: var(--overlayColor) !important;
-    backdrop-filter: blur(6px) !important;
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurMed) !important;
 }
 
 /* Active / pressed state */
 .menubar > .menuitem:active,
 .menubar > .menuitem[open] {
-    background-color: var(--overlayColor) !important;
-    backdrop-filter: blur(8px) !important;
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurMedHigh) !important;
 }
-
 
 
 
