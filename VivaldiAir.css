@@ -1,4 +1,4 @@
-/* Vivaldi Air v.15
+/* Vivaldi Air v.16
 TODO: Suggestions?
 Fix sorting in panels
 Fix tree items
@@ -756,6 +756,7 @@ button.button-startpage:after { content: unset; }
     background-color: var(--bg) !important;
     backdrop-filter: var(--blurMedHigh) !important;
 }
+
 
 
 
