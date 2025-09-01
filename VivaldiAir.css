@@ -109,15 +109,21 @@ Do translate menu
     border-radius: var(--radius);
 }
 
-#panels-container.left { margin-left: 5px; }  
-#panels-container.left:not(.icons) #panels .panel-group {
-    border-right: none;
+/* Default: no margin */
+#panels-container.left,
+#panels-container.right {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
 }
 
-#panels-container.right { margin-right: 5px; }  
-#panels-container.right:not(.icons) #panels .panel-group {
-    border-left: none;
+/* When sidebar has a non-zero width, re-apply margins */
+#panels-container.left[style*="width:" i]:not([style*="width: 0" i]) {
+    margin-left: 5px !important;
 }
+#panels-container.right[style*="width:" i]:not([style*="width: 0" i]) {
+    margin-right: 5px !important;
+}
+
 
 #switch {
     padding-bottom: 5px;
@@ -130,7 +136,6 @@ Do translate menu
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
-    min-width: 44px;
     width: fit-content;
 }
 
@@ -756,6 +761,7 @@ button.button-startpage:after { content: unset; }
     background-color: var(--bg) !important;
     backdrop-filter: var(--blurMedHigh) !important;
 }
+
 
 
 
