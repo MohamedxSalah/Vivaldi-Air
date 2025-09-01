@@ -187,3 +187,13 @@ update 15
 fix sidebar webpanel content when it is on the right , as content appeared missaligned
 
 clean sidebar code
+
+---
+Update 16
+---
+
+Merga pullrequest : A few changes (panels, statusbar, vars and widgets) thnx Ryfters
+
+now sidepanel content is blurred and we have aa blured statusbar
+
+V.16 hotfix : Fixed ghost sidebar issue and persistent sidebar margin issue
