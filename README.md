@@ -197,3 +197,12 @@ Merga pullrequest : A few changes (panels, statusbar, vars and widgets) thnx Ryf
 now sidepanel content is blurred and we have aa blured statusbar
 
 V.16 hotfix : Fixed ghost sidebar issue and persistent sidebar margin issue
+
+---
+Update 17
+---
+Merge pull request Ryfters
+transition not always working
+tree items background 
+
+V17.1 : Fix background for history panel 
