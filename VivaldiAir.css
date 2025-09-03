@@ -1,4 +1,4 @@
-/* Vivaldi Air v.18
+/* Vivaldi Air v.18.1
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -687,10 +687,10 @@ button.button-startpage:after { content: unset; }
 /* ======================== */
 
 /* Left side */
-.tabs-left .tabbar-wrapper {
+.tabs-left #tabs-tabbar-container {
     margin-bottom: 5px !important;
-	margin-right: -2px !important;
-    margin-top: -2px !important;
+	margin-right: 0px !important;
+    margin-top: 0px !important;
 }
 
 /* Right side: use container instead */
@@ -779,5 +779,6 @@ button.button-startpage:after { content: unset; }
     -webkit-backdrop-filter: var(--blurMed) !important;
     transition: backdrop-filter var(--anim-duration) ease, background-color var(--anim-duration) ease;
 }
+
 
 
