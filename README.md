@@ -201,8 +201,17 @@ V.16 hotfix : Fixed ghost sidebar issue and persistent sidebar margin issue
 ---
 Update 17
 ---
+
 Merge pull request Ryfters
+
 transition not always working
+
 tree items background 
 
 V17.1 : Fix background for history panel 
+
+---
+Update 18
+---
+
+fix vertical tabs side and top margins, remove unneeded code
