@@ -1,7 +1,6 @@
-/* Vivaldi Air v.16
+/* Vivaldi Air v.15
 TODO: Suggestions?
 Fix sorting in panels
-Fix tree items
 Fix checkboxes
 Fix floating panels
 Do translate menu
@@ -23,6 +22,8 @@ Do translate menu
 
     --hoverBlur: var(--blurMed);
 
+    --anim-duration: 128ms;
+
     --space: 5px;
 
 }
@@ -30,11 +31,11 @@ Do translate menu
 /* set theme-aware overlay */
 .theme-dark {
     --bg: var(--bgDark);
-    --bgDisabled: --bgDisabledDark
+    --bgDisabled: var(--bgDisabledDark);
 }
 .theme-light {
     --bg: var(--bgLight);
-    --bgDisabled: --bgDisabledLight
+    --bgDisabled: var(--bgDisabledLight);
 }
 
 /* MAINBAR */
@@ -109,26 +110,10 @@ Do translate menu
     border-radius: var(--radius);
 }
 
-/* Default: no margin */
-#panels-container.left,
-#panels-container.right {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
+#panels-container.left { margin-left: 5px; }  
+#panels-container.right { margin-right: 5px; }  
 
-/* When sidebar has a non-zero width, re-apply margins */
-#panels-container.left[style*="width:" i]:not([style*="width: 0" i]) {
-    margin-left: 5px !important;
-}
-#panels-container.right[style*="width:" i]:not([style*="width: 0" i]) {
-    margin-right: 5px !important;
-}
-
-
-#switch {
-    padding-bottom: 5px;
-    min-width: 44px;
-}
+#panels-container #switch { padding-bottom: 5px; min-width: 44px; }
 
 #panels-container {
     margin-bottom: 5px;
@@ -136,7 +121,25 @@ Do translate menu
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: var(--radius);
-    width: fit-content;
+    min-width: 44px;
+    transition: 
+        width var(--anim-duration), 
+        margin-left var(--anim-duration) ease-out, 
+        min-width var(--anim-duration) !important;
+
+}
+
+#panels-container.switcher {
+    width: 0;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+}
+
+/* doesnt disappear on collapse transition */
+#panels-container.switcher #switch {
+    visibility: none !important; 
 }
 
 #panels {
@@ -174,7 +177,7 @@ Do translate menu
     height: calc(var(--treeViewRowHeight) - 2px);
 }
 
-#panels .vivaldi-tree .tree-row {
+#panels #window-panel .vivaldi-tree .tree-row {
     background-color: var(--bg) !important;
 }
 
@@ -761,10 +764,3 @@ button.button-startpage:after { content: unset; }
     background-color: var(--bg) !important;
     backdrop-filter: var(--blurMedHigh) !important;
 }
-
-
-
-
-
-
-
