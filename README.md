@@ -215,3 +215,5 @@ Update 18
 ---
 
 fix vertical tabs side and top margins, remove unneeded code
+
+v18.1 : unify the vertical tabs margins code
