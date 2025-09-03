@@ -1,4 +1,4 @@
-/* Vivaldi Air v.15
+/* Vivaldi Air v.17.1
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -764,3 +764,16 @@ button.button-startpage:after { content: unset; }
     background-color: var(--bg) !important;
     backdrop-filter: var(--blurMedHigh) !important;
 }
+
+/* History panel tree items - make transparent and blurred */
+#history-panel .vivaldi-tree {
+    background: transparent !important; /* Ensure the tree container is transparent to let panel blur show through if needed */
+}
+
+#history-panel .vivaldi-tree .tree-row {
+    background-color: transparent !important; /* Semi-transparent bg */
+    backdrop-filter: var(--blurMed) !important; /* Apply blur for glass effect */
+    -webkit-backdrop-filter: var(--blurMed) !important;
+    transition: backdrop-filter var(--anim-duration) ease, background-color var(--anim-duration) ease;
+}
+
