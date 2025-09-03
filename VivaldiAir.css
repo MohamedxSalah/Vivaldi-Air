@@ -1,4 +1,4 @@
-/* Vivaldi Air v.17.1
+/* Vivaldi Air v.18
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -682,18 +682,22 @@ button.button-startpage:after { content: unset; }
     padding-bottom: 10px !important; /* default 5px + 5px extra gap */
 }
 
-/* =========================== */
-/* FIX side tabs bottom margin */
-/* =========================== */
+/* ======================== */
+/* FIX vertical tabs margin */
+/* ======================== */
 
 /* Left side */
 .tabs-left .tabbar-wrapper {
     margin-bottom: 5px !important;
+	margin-right: -2px !important;
+    margin-top: -2px !important;
 }
 
 /* Right side: use container instead */
 .tabs-right #tabs-tabbar-container {
     margin-bottom: 5px !important;
+	margin-left: 0px !important;
+	margin-top: 0px !important;
 }
 
 /* ============================================= */
@@ -765,10 +769,9 @@ button.button-startpage:after { content: unset; }
     backdrop-filter: var(--blurMedHigh) !important;
 }
 
-/* History panel tree items - make transparent and blurred */
-#history-panel .vivaldi-tree {
-    background: transparent !important; /* Ensure the tree container is transparent to let panel blur show through if needed */
-}
+/* ============================ */
+/* FIX History panel tree items */
+/* ============================ */
 
 #history-panel .vivaldi-tree .tree-row {
     background-color: transparent !important; /* Semi-transparent bg */
@@ -776,4 +779,5 @@ button.button-startpage:after { content: unset; }
     -webkit-backdrop-filter: var(--blurMed) !important;
     transition: backdrop-filter var(--anim-duration) ease, background-color var(--anim-duration) ease;
 }
+
 
