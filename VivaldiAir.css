@@ -1,4 +1,4 @@
-/* Vivaldi Air v.19
+/* Vivaldi Air v.19.1
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -313,10 +313,12 @@ footer .toolbar-statusbar {
 
 /* INNER ROUND BORDERS */
 
-#browser:not(.fullscreen) #webpage-stack {
-    border-radius: var(--radius);
-    margin: 0 5px 5px 5px;
+#webpage-stack {
+    border-radius: var(--radius) !important;
+    margin: 0 5px 5px 5px !important;
+    overflow: hidden;
 }
+
 
 /* SPEED DIAL */
 .SpeedDial--Thumbnail {
@@ -783,6 +785,7 @@ button.button-startpage:after { content: unset; }
 .bookmark-bar {
     z-index: 5 !important;
 }
+
 
 
 
