@@ -1,4 +1,4 @@
-/* Vivaldi Air v.18.1
+/* Vivaldi Air v.18.2
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -778,6 +778,11 @@ button.button-startpage:after { content: unset; }
     backdrop-filter: var(--blurMed) !important; /* Apply blur for glass effect */
     -webkit-backdrop-filter: var(--blurMed) !important;
     transition: backdrop-filter var(--anim-duration) ease, background-color var(--anim-duration) ease;
+}
+
+/* === Fix: Bookmark bar to appear below the suggestions === */
+.bookmark-bar {
+    z-index: 5 !important;
 }
 
 
