@@ -225,3 +225,5 @@ update 19
 ---
 
 Fixed titlebar in settings and popup windows
+
+Update 19.1: fullscreen mode now have inner round
