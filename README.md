@@ -227,3 +227,4 @@ update 19
 Fixed titlebar in settings and popup windows
 
 Update 19.1: fullscreen mode now have inner round
+update 19.2 : removed inner rounds from full screen as it cause issues with videos full screen and fix gaps
