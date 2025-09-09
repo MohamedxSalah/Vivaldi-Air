@@ -808,9 +808,10 @@ button.button-startpage:after { content: unset; }
 /* Fix window buttons alignment in vertical tabs mode */
 #browser.win.tabs-left .window-buttongroup,
 #browser.win.tabs-right .window-buttongroup {
-    right: 0px !important;   /* align flush to the edge */
-    margin-right: 0px;       /* small gap so they don’t touch profile button */
+    right: 0px !important;  
+    margin-right: 0px;       
 }
+
 
 
 
