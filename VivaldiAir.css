@@ -1,4 +1,4 @@
-/* Vivaldi Air v.19.2
+/* Vivaldi Air v.19.3
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -805,6 +805,12 @@ button.button-startpage:after { content: unset; }
     z-index: 5 !important;
 }
 
+/* Fix window buttons alignment in vertical tabs mode */
+#browser.win.tabs-left .window-buttongroup,
+#browser.win.tabs-right .window-buttongroup {
+    right: 0px !important;   /* align flush to the edge */
+    margin-right: 0px;       /* small gap so they don’t touch profile button */
+}
 
 
 
