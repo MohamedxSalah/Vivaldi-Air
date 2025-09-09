@@ -1,8 +1,7 @@
-/* Vivaldi Air v.19.3
+/* Vivaldi Air v.20
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
-Fix floating panels
 Do translate menu
 */
 
@@ -106,8 +105,10 @@ Do translate menu
 #panels-container.overlay:not(.icons) .panel-group {
     background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px) !important;
     border-radius: var(--radius);
+	margin-left: 5px;
+	margin-right: 5px;
 }
 
 #panels-container.left { margin-left: 5px; }  
@@ -127,6 +128,18 @@ Do translate menu
         margin-left var(--anim-duration) ease-out, 
         min-width var(--anim-duration) !important;
 
+}
+
+/* Create backdrop blur with pseudo-element */
+#panels-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    pointer-events: none;
+    z-index: -1;
 }
 
 #panels-container.switcher {
@@ -811,6 +824,7 @@ button.button-startpage:after { content: unset; }
     right: 0px !important;  
     margin-right: 0px;       
 }
+
 
 
 
