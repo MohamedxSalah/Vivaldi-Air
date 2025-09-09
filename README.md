@@ -231,3 +231,9 @@ Update 19.1: fullscreen mode now have inner round
 update 19.2 : removed inner rounds from full screen as it cause issues with videos full screen and fix gaps
 
 update 19.3: Fix window buttons alignment in vertical tabs mode
+
+---
+update 20
+---
+
+Fixed floating panel
