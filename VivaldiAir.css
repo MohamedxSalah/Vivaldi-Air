@@ -1,7 +1,8 @@
-/* Vivaldi Air v.20
+/* Vivaldi Air v.19.3
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
+Fix floating panels
 Do translate menu
 */
 
@@ -102,6 +103,30 @@ Do translate menu
 
 /* SIDEBAR */
 
+#panels-container {
+    margin-bottom: 5px;
+    background-color: var(--bg);
+    border-radius: var(--radius);
+    min-width: 44px;
+    position: relative;
+    transition: 
+        width var(--anim-duration), 
+        margin-left var(--anim-duration) ease-out, 
+        min-width var(--anim-duration) !important;
+}
+
+/* Create backdrop blur with pseudo-element */
+#panels-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    pointer-events: none;
+    z-index: -1;
+}
+
 #panels-container.overlay:not(.icons) .panel-group {
     background-color: var(--bg) !important;
     backdrop-filter: blur(12px) !important;
@@ -116,31 +141,7 @@ Do translate menu
 
 #panels-container #switch { padding-bottom: 5px; min-width: 44px; }
 
-#panels-container {
-    margin-bottom: 5px;
-    background-color: var(--bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: var(--radius);
-    min-width: 44px;
-    transition: 
-        width var(--anim-duration), 
-        margin-left var(--anim-duration) ease-out, 
-        min-width var(--anim-duration) !important;
 
-}
-
-/* Create backdrop blur with pseudo-element */
-#panels-container::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: var(--radius);
-    pointer-events: none;
-    z-index: -1;
-}
 
 #panels-container.switcher {
     width: 0;
@@ -824,10 +825,3 @@ button.button-startpage:after { content: unset; }
     right: 0px !important;  
     margin-right: 0px;       
 }
-
-
-
-
-
-
-
