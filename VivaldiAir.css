@@ -1,4 +1,4 @@
-/* Vivaldi Air v.21
+/* Vivaldi Air v.21.1
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -818,11 +818,14 @@ button.button-startpage:after { content: unset; }
     z-index: 5 !important;
 }
 
-/* Fix window buttons alignment in vertical tabs mode */
+/* =============================*/
+/* Fix window buttons alignment */
+/* ===========================]*/
 #browser.win.tabs-left .window-buttongroup,
-#browser.win.tabs-right .window-buttongroup {
-    right: 0px !important;  
-    margin-right: 0px;       
+#browser.win.tabs-right .window-buttongroup,
+#browser.win.tabs-off .window-buttongroup {
+    right: 0px !important;
+    margin-right: 0px !important;
 }
 
 /* ========================= */
@@ -850,6 +853,7 @@ button.button-startpage:after { content: unset; }
 #browser .tab-position.colored .tab:not(.active) .tab-header {
     color: var(--colorFg) !important;
 }
+
 
 
 
