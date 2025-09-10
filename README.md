@@ -245,3 +245,9 @@ FIX Colored Tab Groups
 v21.1: fix windows button alignment when hiding tab bar
 
 v21.2: change collapse title bar approach to fix bug with the horizontal settings 
+
+---
+update 22
+---
+
+fixed workspace thnx to operaldi
