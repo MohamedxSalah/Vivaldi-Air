@@ -239,3 +239,9 @@ update 20
 Fixed floating panel
 
 v20.1: hotfix for sidebar
+
+---
+Update 21
+---
+
+FIX Colored Tab Groups
