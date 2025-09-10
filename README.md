@@ -239,3 +239,5 @@ Update 21
 ---
 
 FIX Colored Tab Groups
+
+v21.1: fix windows button alignment when hiding tab bar
