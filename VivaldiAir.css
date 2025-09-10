@@ -1,4 +1,4 @@
-/* Vivaldi Air v.21.2
+/* Vivaldi Air v.22
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -255,20 +255,84 @@ footer .toolbar-statusbar {
     border: none !important;
 }
 
-/* WORKSPACES */
+/* ====================== */
+/* UNIVERSAL WORKSPACES   */
+/* ====================== */
 
-.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar,
-.color-behind-tabs-on #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar {
-    color: var(--colorFg);
+/* Workspace buttons on tabbar (all positions) */
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar,
+#tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar {
+    color: var(--colorFg) !important;
+    margin-top: 5px;
+    background: transparent !important;
 }
 
+/* Hover / active workspace button */
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar > button:active,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar > button:active,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar:not(.toolbar-spacer, .toolbar-spacer-flexible) > button:not([disabled]):hover {
-    background-color: var(--bg);
-    backdrop-filter: var(--blurMed);
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurMed) !important;
+    -webkit-backdrop-filter: var(--blurMed) !important;
+    border-radius: var(--radius);
 }
+
+/* Workspace popup container */
+.button-popup.WorkspacePopup {
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurHigh) !important;
+    -webkit-backdrop-filter: var(--blurHigh) !important;
+    border-radius: var(--radius);
+    width: 194px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Workspace list items */
+.WorkspacePopup-Items .workspace-item-wrapper,
+.WorkspacePopup-Items .this-window {
+    background-color: transparent !important;
+    border-radius: var(--radius);
+    margin-bottom: 3px;
+    transition: background-color var(--anim-duration) ease;
+}
+
+/* Hover effect */
+.WorkspacePopup-Items .workspace-item-wrapper:hover,
+.WorkspacePopup-Items .this-window:hover {
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurLow) !important;
+    -webkit-backdrop-filter: var(--blurLow) !important;
+}
+
+/* Tab counter */
+.WorkspacePopup-Items .workspace-item-wrapper .title .tab-count,
+.WorkspacePopup-Items .this-window .title .tab-count {
+    color: var(--colorFg) !important;
+    font-weight: 500;
+}
+
+/* Popup padding adjustments */
+.WorkspacePopup-Items { padding: 5px 5px 0 !important; }
+.WorkspacePopup .actions { padding: 0px 5px 5px !important; }
+.WorkspacePopup-Items hr { margin: 5px 0 1px !important; }
+
+/* Remove default arrow from popup */
+.button-popup-right.button-popup-arrow-dark:before,
+.button-popup-arrow-light:before { border-bottom-color: transparent !important; }
+
+/* Page tiling popup (consistent style) */
+.button-popup.ToolbarButtonPopup-DefaultStyles {
+    background-color: var(--bg) !important;
+    backdrop-filter: var(--blurMed) !important;
+    -webkit-backdrop-filter: var(--blurMed) !important;
+    border-radius: var(--radius);
+}
+.button-popup.ToolbarButtonPopup-DefaultStyles h2 {
+    background: transparent !important;
+    border-bottom: none !important;
+}
+
 
 /* TABS */
 
@@ -847,6 +911,7 @@ button.button-startpage:after { content: unset; }
 #browser .tab-position.colored .tab:not(.active) .tab-header {
     color: var(--colorFg) !important;
 }
+
 
 
 
