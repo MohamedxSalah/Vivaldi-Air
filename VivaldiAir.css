@@ -1,4 +1,4 @@
-/* Vivaldi Air v.20.1
+/* Vivaldi Air v.21
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -823,6 +823,32 @@ button.button-startpage:after { content: unset; }
 #browser.win.tabs-right .window-buttongroup {
     right: 0px !important;  
     margin-right: 0px;       
+}
+
+/* ========================= */
+/* FIX: Colored Tab Groups   */
+/* ========================= */
+
+/* Group title / text color */
+#browser .tab-position.colored .tab-group-indicator,
+#browser .tab-position.colored .tabbar-group-title {
+    color: var(--colorFg) !important;
+}
+
+/* === Stack counter fix for both light & dark themes === */
+#browser .tab-position.colored .stack-counter {
+    background-color: var(--colorHighlightBg) !important; /* theme accent */
+    color: var(--colorHighlightFg) !important; /* auto-contrasts with accent */
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 0 6px;
+    min-width: 16px;
+    text-align: center;
+}
+
+/* Ensure inactive tab group text stays theme-aware */
+#browser .tab-position.colored .tab:not(.active) .tab-header {
+    color: var(--colorFg) !important;
 }
 
 
