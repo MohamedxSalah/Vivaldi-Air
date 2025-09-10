@@ -6,16 +6,16 @@ Screenshots:
 
 Dark mode
 
-<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/3e5a1be0-03e1-4713-b035-5870babece96" />
-<img width="1918" height="1023" alt="image" src="https://github.com/user-attachments/assets/24cb552a-0768-41e9-9cc7-6ef08a5daa39" />
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/97ff637d-a3a7-4070-be19-4f66ab08d2a8" />
-
+<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b7a67794-51ef-4577-8bde-fca201598bc0" />
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/028bcdd0-1afc-418b-bd64-478f4245410b" />
+<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/c4783e26-bf84-4719-b92c-9fa47666dcc1" />
 
 Light mode
 
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/5543b43e-e4a7-4535-b56c-5fcaef2b1405" />
-<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/faeacaef-7cd0-4ee4-bd73-71d3e43459e2" />
-<img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/c2215439-56cd-4eed-b47d-c1bfcde64904" />
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d6beee63-a914-4deb-964f-77990e854e8d" />
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/3f9e61aa-231b-4deb-87d4-8172e72c3a91" />
+<img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f8b8-8557-4a89-89cb-659bc0c5751a" />
+
 
 Configuration steps:
 
