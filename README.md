@@ -7,12 +7,14 @@ Screenshots:
 Dark mode
 
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/df3e2257-1fd9-4202-9d78-e15c275979de" />
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/9ac4775b-d2cc-4a99-b246-21759ff1602b" />
 <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/908ed19b-25b3-40dd-8e7c-b328f7bbfb4f" />
 <img width="1917" height="1025" alt="image" src="https://github.com/user-attachments/assets/33ba1400-af78-4455-b105-354a57b51ecc" />
 
 Light mode
 
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/d6beee63-a914-4deb-964f-77990e854e8d" />
+<img width="1917" height="1017" alt="image" src="https://github.com/user-attachments/assets/508b57c5-701b-472c-8abc-cb8116fc388a" />
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/3f9e61aa-231b-4deb-87d4-8172e72c3a91" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f8b8-8557-4a89-89cb-659bc0c5751a" />
 
