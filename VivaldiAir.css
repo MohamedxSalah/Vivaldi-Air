@@ -263,7 +263,6 @@ footer .toolbar-statusbar {
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > .button-toolbar,
 #tabs-tabbar-container .toolbar:not(.toolbar-small) > div > .button-toolbar {
     color: var(--colorFg) !important;
-    margin-top: 5px;
     background: transparent !important;
 }
 
@@ -911,6 +910,7 @@ button.button-startpage:after { content: unset; }
 #browser .tab-position.colored .tab:not(.active) .tab-header {
     color: var(--colorFg) !important;
 }
+
 
 
 
