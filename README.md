@@ -1,6 +1,6 @@
 # Vivaldi Air
-A fork of Operaldi, WITH BLUR and tweaks for horizontal tabs
-Aims at mimicking Opera Air aesthetics
+A fork of Operaldi
+That aims at mimicking Opera Air aesthetics
 
 Screenshots:
 
