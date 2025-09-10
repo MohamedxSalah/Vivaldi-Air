@@ -16,9 +16,9 @@ Light mode
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/3f9e61aa-231b-4deb-87d4-8172e72c3a91" />
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2ad4f8b8-8557-4a89-89cb-659bc0c5751a" />
 
-
+---
 Configuration steps:
-
+---
   1) Download the CSS file
   2) Type vivaldi://experiments in the URL bar and check Allow CSS modifications
   3) Open Vivaldi Settings
@@ -50,14 +50,8 @@ Configuration steps:
 
   You can replace the default icons with mine from this repository.
   
-  7) Tabs > Tab Bar Position > Left
-  8) Tabs > Tab Stacking > Accordion (only if you are using tab stacking)
-  9) Tabs > WORKSPACES > check Enable Workspaces and Show Workspaces in Tab Bar
-  10) Panel > Panel Position > Right Side
-  11) Bookmarks > BOOKMARK BAR > uncheck Show Bookmark Bar
-  12) Rightclick tab stacking > Edit... > Choose any color to use design from CSS (only if you are using tab stacking), repeat for every tab stacking
-  13) Restart Vivaldi
-  14) Enjoy your new CSS
+  7) Restart Vivaldi
+  8) Enjoy your new CSS
 
 -----
 Update 1
