@@ -1,4 +1,4 @@
-/* Vivaldi Air v.21.1
+/* Vivaldi Air v.21.2
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -746,16 +746,10 @@ button.button-startpage:after { content: unset; }
 /* Collapse header/titlebar completely when tabs are hidden
    BUT keep it in popup/settings windows */
    
-#browser.tabs-off:not(.popup):not(.settings):not(.is-settingspage) #header,
-#browser.tabs-off:not(.popup):not(.settings):not(.is-settingspage) #titlebar {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    height: 0 !important;
-    min-height: 0 !important;
-    padding: 0 !important;
+#browser.tabs-off #tabs-tabbar-container,
+#browser.tabs-off #header {
     margin: 0 !important;
-    overflow: hidden !important;
+    padding: 0 !important;
 }
 
 /* ======================= */
@@ -853,6 +847,7 @@ button.button-startpage:after { content: unset; }
 #browser .tab-position.colored .tab:not(.active) .tab-header {
     color: var(--colorFg) !important;
 }
+
 
 
 
