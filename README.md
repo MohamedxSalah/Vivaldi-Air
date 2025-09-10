@@ -6,9 +6,9 @@ Screenshots:
 
 Dark mode
 
-<img width="1919" height="1019" alt="image" src="https://github.com/user-attachments/assets/b7a67794-51ef-4577-8bde-fca201598bc0" />
-<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/028bcdd0-1afc-418b-bd64-478f4245410b" />
-<img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/c4783e26-bf84-4719-b92c-9fa47666dcc1" />
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/df3e2257-1fd9-4202-9d78-e15c275979de" />
+<img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/908ed19b-25b3-40dd-8e7c-b328f7bbfb4f" />
+<img width="1917" height="1025" alt="image" src="https://github.com/user-attachments/assets/33ba1400-af78-4455-b105-354a57b51ecc" />
 
 Light mode
 
