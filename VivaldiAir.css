@@ -1,4 +1,4 @@
-/* Vivaldi Air v.22
+/* Vivaldi Air v.23
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -909,6 +909,34 @@ button.button-startpage:after { content: unset; }
 /* Ensure inactive tab group text stays theme-aware */
 #browser .tab-position.colored .tab:not(.active) .tab-header {
     color: var(--colorFg) !important;
+}
+
+/* ---------------------------
+   Fix: Address Bar inside Tab Bar (Vivaldi 7.6)
+   --------------------------- */
+
+/* inner fields inside moved UrlBar */
+#tabs-tabbar-container .UrlBar .UrlBar-AddressField,
+#tabs-tabbar-container .UrlBar .SearchField,
+#tabs-tabbar-container .toolbar-mainbar .UrlBar-AddressField,
+#tabs-tabbar-container .toolbar-mainbar .SearchField,
+.tabbar-wrapper .UrlBar-AddressField {
+    background-color: var(--bg) !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: var(--radius) !important;
+}
+
+/* Allow dropdowns to escape the tabbar/toolbar */
+#tabs-tabbar-container,
+#tabs-tabbar-container .tabbar-wrapper,
+#tabs-tabbar-container .toolbar-mainbar,
+.tabbar-wrapper,
+.mainbar,
+#titlebar {
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 10000 !important;
 }
 
 
