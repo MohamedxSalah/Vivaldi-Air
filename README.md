@@ -251,3 +251,9 @@ update 22
 ---
 
 fixed workspace thnx to operaldi
+
+---
+Update 23
+---
+Themed address bar when moved to the tab bar (vivaldi 7.6 fix)
+<img width="518" height="1013" alt="image" src="https://github.com/user-attachments/assets/0e830abf-0b76-470a-8e6f-73ab13db2a0b" />
