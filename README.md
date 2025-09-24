@@ -262,3 +262,4 @@ Themed address bar when moved to the tab bar (vivaldi 7.6 fix)
 update 24
 ---
 Fixed stacking issue caused by vivaldi new update
+v24.1: fixed setting button appears under the tab bar
