@@ -1,4 +1,4 @@
-/* Vivaldi Air v.23
+/* Vivaldi Air v.24
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -540,9 +540,8 @@ footer .toolbar-statusbar {
     color: inherit !important;
     border-radius: var(--radius) !important;
 }
-.mainbar,
-.bookmark-bar {
-    z-index: 10; /* keep reasonable */
+.mainbar{
+    z-index: 1; /* keep reasonable */
 }
 
 /* ========================================================= */
@@ -872,7 +871,7 @@ button.button-startpage:after { content: unset; }
 
 /* === Fix: Bookmark bar to appear below the suggestions === */
 .bookmark-bar {
-    z-index: 5 !important;
+    z-index: 0 !important;
 }
 
 /* =============================*/
@@ -927,16 +926,15 @@ button.button-startpage:after { content: unset; }
     border-radius: var(--radius) !important;
 }
 
-/* Allow dropdowns to escape the tabbar/toolbar */
-#tabs-tabbar-container,
-#tabs-tabbar-container .tabbar-wrapper,
-#tabs-tabbar-container .toolbar-mainbar,
-.tabbar-wrapper,
-.mainbar,
-#titlebar {
-    overflow: visible !important;
+/* Ensure tab bar has proper stacking */
+#tabs-tabbar-container {
+    z-index: 1 !important;
     position: relative !important;
-    z-index: 10000 !important;
+}
+
+/* Force window controls to appear above tab bar */
+.window-buttongroup {
+    z-index: 1000 !important;
 }
 
 
