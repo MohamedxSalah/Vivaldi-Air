@@ -263,3 +263,4 @@ update 24
 ---
 Fixed stacking issue caused by vivaldi new update
 v24.1: fixed setting button appears under the tab bar
+v24.2: themed search box in the tab bar
