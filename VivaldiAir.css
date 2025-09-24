@@ -1,4 +1,4 @@
-/* Vivaldi Air v.24
+/* Vivaldi Air v.24.1
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -937,6 +937,10 @@ button.button-startpage:after { content: unset; }
     z-index: 1000 !important;
 }
 
+/* Force settings button to appear above tab bar */
+.vivaldi, .sidebar .button-toolbar.settings, .button-settings {
+    z-index: 1001 !important;
+}
 
 
 
