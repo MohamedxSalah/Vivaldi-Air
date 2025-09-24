@@ -1,4 +1,4 @@
-/* Vivaldi Air v.24.1
+/* Vivaldi Air v.24.2
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -914,12 +914,13 @@ button.button-startpage:after { content: unset; }
    Fix: Address Bar inside Tab Bar (Vivaldi 7.6)
    --------------------------- */
 
-/* inner fields inside moved UrlBar */
+/* Address & Search fields inside tab bar */
 #tabs-tabbar-container .UrlBar .UrlBar-AddressField,
 #tabs-tabbar-container .UrlBar .SearchField,
 #tabs-tabbar-container .toolbar-mainbar .UrlBar-AddressField,
 #tabs-tabbar-container .toolbar-mainbar .SearchField,
-.tabbar-wrapper .UrlBar-AddressField {
+.tabbar-wrapper .UrlBar-AddressField,
+.tabbar-wrapper .SearchField {
     background-color: var(--bg) !important;
     border: none !important;
     box-shadow: none !important;
@@ -941,6 +942,7 @@ button.button-startpage:after { content: unset; }
 .vivaldi, .sidebar .button-toolbar.settings, .button-settings {
     z-index: 1001 !important;
 }
+
 
 
 
