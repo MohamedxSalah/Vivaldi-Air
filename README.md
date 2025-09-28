@@ -268,3 +268,5 @@ v24.1: fixed setting button appears under the tab bar
 v24.2: themed search box in the tab bar
 
 v24.3 : fixed sidebar rounding issue for some users
+
+v24.4 : increase transparency of selected tab and address bar
