@@ -1,4 +1,4 @@
-/* Vivaldi Air v.24.3
+/* Vivaldi Air v.24.4
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -75,7 +75,7 @@ Do translate menu
 .color-behind-tabs-on .SearchField:focus-within, 
 .color-behind-tabs-on .MailSearchField-Inner:focus-within, 
 .color-behind-tabs-on .UrlBar-AddressField:focus-within {
-    background-color: var(--bg);
+    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -432,7 +432,7 @@ footer .toolbar-statusbar {
 
 /* Transparent active tab background */
 .tab.active {
-    background-color: var(--bg) !important;
+    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: background-color 0.2s ease;
@@ -921,7 +921,7 @@ button.button-startpage:after { content: unset; }
 #tabs-tabbar-container .toolbar-mainbar .SearchField,
 .tabbar-wrapper .UrlBar-AddressField,
 .tabbar-wrapper .SearchField {
-    background-color: var(--bg) !important;
+    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: var(--radius) !important;
@@ -949,6 +949,7 @@ button.button-startpage:after { content: unset; }
     border-radius: var(--radius) !important;
     overflow: hidden; 
 }
+
 
 
 
