@@ -1,4 +1,4 @@
-/* Vivaldi Air v.24.4
+/* Vivaldi Air v.25
 TODO: Suggestions?
 Fix sorting in panels
 Fix checkboxes
@@ -75,7 +75,7 @@ Do translate menu
 .color-behind-tabs-on .SearchField:focus-within, 
 .color-behind-tabs-on .MailSearchField-Inner:focus-within, 
 .color-behind-tabs-on .UrlBar-AddressField:focus-within {
-    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
+    background-color: var(--bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
@@ -432,7 +432,7 @@ footer .toolbar-statusbar {
 
 /* Transparent active tab background */
 .tab.active {
-    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
+    background-color: var(--bg) !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: background-color 0.2s ease;
@@ -541,7 +541,7 @@ footer .toolbar-statusbar {
     border-radius: var(--radius) !important;
 }
 .mainbar{
-    z-index: 1; /* keep reasonable */
+    z-index: 2; /* keep reasonable */
 }
 
 /* ========================================================= */
@@ -921,7 +921,7 @@ button.button-startpage:after { content: unset; }
 #tabs-tabbar-container .toolbar-mainbar .SearchField,
 .tabbar-wrapper .UrlBar-AddressField,
 .tabbar-wrapper .SearchField {
-    background-color: color-mix(in srgb, var(--bg) 40%, transparent) !important;
+    background-color: var(--bg) !important;
     border: none !important;
     box-shadow: none !important;
     border-radius: var(--radius) !important;
@@ -949,7 +949,6 @@ button.button-startpage:after { content: unset; }
     border-radius: var(--radius) !important;
     overflow: hidden; 
 }
-
 
 
 
