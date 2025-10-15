@@ -270,3 +270,11 @@ v24.2: themed search box in the tab bar
 v24.3 : fixed sidebar rounding issue for some users
 
 v24.4 : increase transparency of selected tab and address bar
+
+---
+Update 25
+---
+
+Fixed address bar appears under tab bar 
+
+Revert back transparency
