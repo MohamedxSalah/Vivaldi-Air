@@ -1055,10 +1055,51 @@ button.button-startpage:after {
 
 /* Ensure inner panel content respects sidebar radius */
 #panels-container .panel-group, #panels .webpanel-stack .webpanel .webpanel-content {
-    border-radius: var(--radius) !important;
+    border-radius: var(--radius), var(--radius) !important;
     overflow: hidden;
 }
 
+/*=========================*/
+/*        AUTO HIDE        */
+/*=========================*/
+/*(makes elements look better in auto hide mode)*/
+
+/*TAB CONTAINER*/
+.auto-hide #browser.transparent-tabbar.color-behind-tabs-on .auto-hide-wrapper.has-tabbar {
+    background-color: var(--bgColor) !important;
+    backdrop-filter: var(--backgroundBlur);
+    margin: var(--space) !important;
+    width: calc(100% - (6px * 4));
+    box-shadow: var(--glassyShadows);
+    border-radius: var(--radius);
+}
+
+/* removes unnecessary blur effect when autohide is enabled */
+.auto-hide-wrapper .tabbar-wrapper{
+  backdrop-filter: none !important;
+}
+
+/* SIDEBAR */
+.auto-hide-wrapper.left,
+.auto-hide-wrapper.right {
+  height: calc(100% - (6px * 3));
+}
+
+.auto-hide-wrapper.show {
+  box-shadow: none;
+}
+
+/* FOOTER */
+
+.auto-hide-wrapper .toolbar-statusbar {
+    background-color: var(--bgColor);
+    margin-left: var(--space);
+    margin-right: var(--space);
+    margin-bottom: var(--space);
+    border-radius: var(--radius) !important;
+    box-shadow: var(--glassyShadows);
+    backdrop-filter: var(--backgroundBlur);
+}
 
 
 /*better transparency slider */
