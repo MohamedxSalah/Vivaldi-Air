@@ -7,6 +7,11 @@
     --shadowColor: rgba(0,0,0,0.2); 
     --glassTintColorLight: rgba(255, 255, 255, 0.2); 
     --glassTintColorDark: rgba(70, 70, 70, 0.1);
+    --glassyShadows: inset 0px 2px 2px -1px var(--glassTintColorLight),
+        inset 0 -2px 2px -1px var(--glassTintColorLight),
+        inset 2px 0 1px -1px var(--glassTintColorDark),
+        inset -2px 0 1px -1px var(--glassTintColorDark),
+        0 4px 16px 0 var(--shadowColor) !important;
     --bgColor: rgba(0, 0, 0, 0.05);
     --bgDark: rgba(0, 0, 0, 0.2);
     --bgLight: rgba(255, 255, 255, 0.0);
@@ -54,12 +59,7 @@ footer .toolbar-statusbar, /*STATUS BAR*/
 {
     background-color: var(--bgColor) !important;
     backdrop-filter: var(--backgroundBlur) !important;
-    box-shadow: 
-        inset 0px 2px 2px -1px var(--glassTintColorLight),
-        inset 0 -2px 2px -1px var(--glassTintColorLight),
-        inset 2px 0 1px -1px var(--glassTintColorDark),
-        inset -2px 0 1px -1px var(--glassTintColorDark),
-        0 4px 16px 0 var(--shadowColor) !important;
+    box-shadow: var(--glassyShadows);
 }
 
 /*==================================
