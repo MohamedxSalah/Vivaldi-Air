@@ -37,6 +37,18 @@ Do translate menu
     --bgDisabled: var(--bgDisabledLight);
 }
 
+
+
+/* window-buttongroup styles */
+.density-on#browser.win.disable-titlebar .window-buttongroup {
+  height: calc(42px / var(--uiZoomLevel)) ;
+}
+
+#browser .window-buttongroup.on-mainbar {
+  background-color: inherit;
+}
+
+
 /* MAINBAR */
 
 #browser.win.address-top .toolbar-mainbar:has(.window-buttongroup.on-mainbar),
